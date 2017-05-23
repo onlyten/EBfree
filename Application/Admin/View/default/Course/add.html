@@ -1,0 +1,182 @@
+<extend name="Base/base" />
+<block name="special_css">
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+</block>
+<block name="main">
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            </div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div id="content-body" class="container-fluid">
+            <h3>
+              <span>新增课程</span>
+            </h3>
+            <form class="form-horizontal" method="POST" action="{:U('course/add_update')}">
+                <div class="widget-box" style="">
+                    <div class="widget-title">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">课程信息</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-content tab-content" style="">
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                课程名称: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="title" id="title" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                课程价格: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="请输入整数" value="" style="" name="price" id="price" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                显示排序: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="数值越大，排序越靠前" value="" style="" name="weight" id="weight" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                课程图片: </label>
+                            <div class="controls row">
+                                <input id="banner_img_input" name="banner_img_input" type="file" multiple="true">
+                                <input type="text" id="banner_img" name="banner_img" style="display:none;">
+                            </div>
+                            <div id="queue_banner_img" style="margin-left: 140px;"></div>  
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">课程类型：</label>
+                            <div class="controls select-div">
+                                <select name="type" id="type">
+                                    <foreach name="type" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">课程级别：</label>
+                            <div class="controls select-div">
+                                <select name="foreign" id="foreign">
+                                    <foreach name="foreign" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                视频链接: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="video" id="video" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                课程详情图片: </label>
+                            <div class="controls row">
+                                <input id="detail_img_input" name="detail_img_input" type="file" multiple="true"><input type="text" id="detail_img" name="detail_img" style="display:none;">
+                            </div>
+                            <div id="queue_detail_img" style="margin-left: 140px;"></div>  
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                课程等级图片: </label>
+                            <div class="controls row">
+                                <input id="level_img_input" name="level_img_input" type="file" multiple="true"><input type="text" id="level_img" name="level_img" style="display:none;">
+                            </div>
+                            <div id="queue_level_img" style="margin-left: 140px;"></div>  
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--end-main-container-part-->
+</block>
+<block name="special_js">
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+    <script type="text/javascript">
+    <?php $timestamp = time();?>
+        $(function() {            
+            $('#banner_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_banner_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".banner-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_banner_img").append("<div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#banner_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.banner-img-box').remove();
+                    });
+                }
+            });
+            $('#detail_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_detail_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".detail-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_detail_img").append("<div class='upload-img-box detail-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#detail_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.detail-img-box').remove();
+                    });
+                }
+            });
+            $('#level_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_level_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".level-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_level_img").append("<div class='upload-img-box level-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#level_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.level-img-box').remove();
+                    });
+                }
+            });
+        });
+    $(document).ready(function() {
+        
+        /*初始化select表单*/
+        $('select').select2();
+
+    });
+
+    </script>
+</block>

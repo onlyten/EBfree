@@ -1,0 +1,152 @@
+<extend name="Base/base" />
+
+<block name="special_css">
+
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+
+</block>
+
+<block name="main">
+
+    <!--main-container-part-->
+
+    <div id="content">
+
+        <!--breadcrumbs-->
+
+        <div id="content-header">
+
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+
+            </div>
+
+        </div>
+
+        <!--End-breadcrumbs-->
+
+        <div id="content-body" class="container-fluid">
+
+            <h3>
+
+                修改大黄蜂计划注册人员信息
+
+            </h3>
+
+            <form class="form-horizontal" method="POST" action="{:U('YellowBee/update',array('id'=> $person_info['id']))}">
+
+                <div class="widget-box" style="">
+
+                    <div class="widget-title">
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">信息</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="widget-content tab-content" style="">
+
+                        <div class="control-group">
+
+                            <label for="name" class="control-label">
+
+                                姓名: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" style="" name="name" id="name" class="span5" value="{$person_info['name']}"> </div>
+
+                        </div>    
+
+                        <div class="control-group">
+
+                            <label for="wx_nickname" class="control-label">
+
+                                微信昵称: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" disabled="disabled" name="wx_nickname" id="wx_nickname" class="span5" value="{$person_info['wx_nickname']}"> </div>
+
+                        </div> 
+
+                        <div class="control-group">
+
+                            <label for="phone" class="control-label">
+
+                                手机号码: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" style="" name="phone" id="phone" class="span5" value="{$person_info['phone']}"> </div>
+
+                        </div> 
+
+                        <div class="control-group">
+
+                            <label for="advan_course" class="control-label">
+
+                                擅长课程: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" style="" name="advan_course" id="advan_course" class="span5" value="{$person_info['advan_course']}"> </div>
+
+                        </div> 
+
+                        <div class="control-group">
+
+                            <label for="stu_num" class="control-label">
+
+                                学生数量: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" style="" name="stu_num" id="stu_num" class="span5" value="{$person_info['stu_num']}"> </div>
+
+                        </div> 
+
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+</block>
+
+<block name="special_js">
+
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+        
+
+        /*初始化select表单*/
+
+        $('select').select2();
+
+
+
+    });
+    </script>
+
+</block>
+

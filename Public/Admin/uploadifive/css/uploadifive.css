@@ -1,0 +1,92 @@
+/*
+UploadiFive
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+*/
+
+.uploadifive-button {
+    background-color: #49afcd;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+}
+
+.uploadifive-button {
+    float: left;
+    margin-right: 10px;
+}
+
+.upload-img-box .upload-pre-item {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    max-height: 120px;
+    overflow: hidden;
+    padding: 1px;
+    text-align: center;
+    transition: all 0.3s linear 0s;
+    width: 120px;
+}
+
+.upload-img-box .upload-pre-item img {
+    vertical-align: top;
+}
+
+img {
+    border: 0 none;
+    max-width: 100%;
+}
+
+.widget-box {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #cdcdcd;
+    clear: both;
+    position: relative;
+}
+
+.form-horizontal .control-label {
+    font-weight: bold;
+    padding-top: 15px;
+    width: 120px;
+}
+
+.form-horizontal .controls {
+    margin-left: 140px;
+    padding: 10px 0;
+}
+
+.uploadifive-queue-item {
+    background-color: #ffffff;
+    border: 1px dotted #D5D5D5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font: 12px Arial, Helvetica, Sans-serif;
+    margin-top: 3px;
+    padding: 15px;
+    height: 30px;
+}
+
+.uploadifive-queue-item .close {
+    background: url('uploadifive-cancel.png') 0 0 no-repeat;
+    display: block;
+    float: right;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+}
+
+.uploadifive-queue-item .progress {
+    border: 1px solid #D0D0D0;
+    height: 3px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.uploadifive-queue-item .progress-bar {
+    background-color: #0072BC;
+    height: 3px;
+    width: 0;
+}

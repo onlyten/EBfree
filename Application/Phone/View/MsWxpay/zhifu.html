@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html style="background:rgba(234,233,232,100);">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/snower.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" async="" src="__JS__/index/wtj.js"></script>
+<script src="__JS__/index/getsignpackage" type="text/javascript"></script>
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+<script type="text/javascript" src="__JS__/index/maivl.js"></script>
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+<script type="text/javascript" src="__JS__/index/swipe_circle.min.js"></script>
+<script type="text/javascript" src="__JS__/index/index.js"></script>
+<!-- <script src="/huatong/Public/Admin/matrix/js/jquery.min.js"></script>  -->
+<script src="/huatong/Public/Phone/wechat/js/jweixin-1.0.0.js"></script> 
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+   .button.red{
+    border:1px solid #b42323;
+    box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+    background: -webkit-linear-gradient(top,#e85455,#e85455);
+    background: -moz-linear-gradient(top,#e85455,#e85455);
+    background: linear-gradient(top,#e85455,#e85455);
+    }
+</style>
+<title>在线支付</title>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="telephone=no, address=no" name="format-detection">
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- Mobile Devices Support @end -->
+        <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+        <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+<body leftmargin="0" topmargin="0" onselectstart="return true;" ondragstart="return false;">
+        
+<div data-role="container" class="container" style="height: 658px;background:#eae9e8;">
+    <header data-role="header">
+    <div style="background:#eae9e8;">
+        <div style="margin-left:15px;margin-right:15px;padding-top:0px;padding-bottom:10px;">
+            <p style="font-size:20px;"><strong>{$course}</strong></p>
+            <font size="4px">请您支付{$pricee}元，完成每日计划任务，押金即可返还。</font>
+            <span style="float:right;"><a href="javascript:void(0);" onclick="js_method()"><u><font size="4px">规则</font></u></a></span>
+        </div>
+    </div>
+
+    <!-- <div style="background:#f5f4f3;height:50px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;兑换券</p>
+        <span style="float:right;margin-top: -26px;margin-right: 20px;font-size:18px;"><a href="{:U('coupon/index')}"><input  type="submit" style="width:60px; background:red;color:white;border-width: 0px;height:30px;" value="领取"/></a></span>
+    </div> -->
+    <div style="background:#f5f4f3;height:50px;margin-top:4px;">
+        <a href="{:U('Honey/youhui',array('open_id'=>$open_id))}">
+            <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;抵用券/优惠券</p>
+            <span style="float:right;margin-top: -20px;margin-right: 20px;">
+                <img src="__IMG__/Ebshaoer/jian_right.png" style="width:15px" />
+            </span>
+        </a>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:7px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;EB蜜蜂红包</p>
+        <span style="float:right;color:red;font-size:18px;margin-top: -20px;margin-right: 20px;">{$member['red_packet']}元</span>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;实付金额</p>
+        <span style="float:right;color:red;font-size:18px;margin-top: -20px;margin-right: 20px;">
+        <if condition="$price neq 888888">
+            {$price}元
+        </if>
+        <if condition="$price eq 888888">
+            0元
+        </if>
+        </span>
+    </div><br/>
+    <p style="font-size:18px;color:red;">&nbsp;&nbsp;&nbsp;&nbsp;请选择支付方式</p>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;微信支付</p>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;支付宝支付</p>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;银行卡</p>
+    </div><br/>
+    <if condition="$price neq 888888">
+        <div align="center">
+            <button style="width:160px; height:50px; background-color:red; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:20px;" type="button" onclick="callpay()" >确认支付</button>
+        </div>
+    </if>
+    <if condition="$price eq 888888">
+        <div align="center">
+           <a href="{:U('Ebshaoer/gai',array('jine'=>$kouchu,'member_id'=>$member_id,'total'=>$total,'price_ke'=>$price_ke,'level_id'=>$level_id))}"> <button style="width:160px; height:50px; background-color:red; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:20px;" type="button" >确认支付</button></a>
+        </div>
+    </if>
+    </header>
+</div>  
+
+    <footer data-role="footer" class="footer">
+        <!--<div class="copyright"><a href="http://wxc63011ef3f85e714.m.weimob.com/weisite/home?pid=507002&bid=1046949&wechatid=fromUsername&wxref=mp.weixin.qq.com" style="color:#B70000">© 天津英孚青少儿英语</a></div>-->
+         
+      <div class="clearfix width9">
+        <p class="fleft footer_left"><strong><i>EBfree.com</i></strong></p>
+        <p class="fright footer_left"><strong>4008-80-80-80</strong></p>
+      </div>
+
+
+   </footer>
+
+<!--
+导航菜单
+   后台设置的快捷菜单
+-->
+
+<script type="text/javascript" src="__JS__/index/ChatFloat.js"></script>
+<script type="text/javascript">
+var str_domain = location.href.split('/',4)[2];
+var boolIsTest = true;
+if(str_domain == 'www.weimob.com' || str_domain.indexOf('m.weimob.com') > 0){
+	boolIsTest = false;
+}
+//1.0 web
+new ChatFloat({
+        AId: '507002',
+        openid: "",
+		top:150,
+		right:0,
+		IsTest:boolIsTest
+});
+</script>
+
+<!--
+echo STATIC_DOMAIN."/src/jQuery.js?v=10101011 
+-->
+<script type="text/javascript" src="__JS__/index/share_channel.js"></script>
+<script type="text/javascript" src="__JS__/index/base64.js"></script>
+<script type="text/javascript" src="__JS__/index/st.js"></script>
+<script type="text/javascript">
+function js_method() {
+    alert("　　　关于EB蜜蜂押金返还的规则\n\n1.根据任务列表，成功完成每日任务，所有任务完成后，押金全额返还。\n2.&&&&&&&&&&&&&&&&&。\n3.%%%%%%%%%%%%%%%%%%%%%%。\n4.￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥。");
+    // body...
+}
+ //var jq=$.noConflict();
+ //使用案例如###如若上线请到研发群找我@赵增煜###
+st.push("_triggerEvent",{
+		"is_statistic_on":"on", //开关
+		"statisticServerPath": "http://statistic.weimob.com/wm.js", //统计地址
+		"memcServerPath": "http://statistic.weimob.com/memc?cmd=get", //缓存地址
+		"stat_action":"loadPage",  //统计动作类型
+		"stat_optValue":""    //参数值
+});
+</script>
+
+<!-- weixin js sdk start-->
+<script type="text/javascript" src="__JS__/index/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="__JS__/index/weixin.js"></script>
+<script type="text/javascript">
+// alert(window.shareData.t_callback_func);
+// alert('getShareImageUrl'+window.shareData.f_callback_func);
+var imgUrl= getShareImageUrl();
+_share.push("_shareEvent",{
+		"is_share_on":"on", //开关
+		"pid":507002,
+		"bid":"",
+		"mUrl":"http://m.weimob.com",
+		"optVal":
+        {
+            "shareLink": window.shareData.timeLineLink,
+            "shareTitle": window.shareData.tTitle,
+            "shareContent":window.shareData.tContent,
+            "shareImg":window.shareData.imgUrl,
+            "t_callback_func":window.shareData.t_callback_func,
+            "f_callback_func":window.shareData.f_callback_func,
+            "shareType":"",     
+            "shareDataUrl":""
+        }
+});
+</script>
+<script type="text/javascript">
+    //调用微信JS api 支付
+    function jsApiCall()
+    {
+    	WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',
+            {$paraVal},
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                 window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7e4fb28fe1443248&redirect_uri=http://www.ebfree.com/huatong/index.php/Phone/Honey/honey&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                //alert(res.err_code+res.err_desc+res.err_msg);
+            }
+        );
+    }
+
+    function callpay()
+    {
+        //ja = <?php echo $jsApiParameters; ?>;
+        //ja = "abc";
+        //alert("ja");
+
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+</script>
+<script>
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+  wx.config({
+    debug: false,
+    appId: '<?php echo $signPackage["appId"];?>',
+    timestamp: <?php echo $signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
+    jsApiList: [
+      // 所有要调用的 API 都要加到这个列表中
+      'addCard',
+    ]
+  });
+
+  wx.ready(function () {
+
+    $("#wc").on('click', function(event) {
+        wx.addCard({
+            cardList: [{
+                cardId: 'pA9VnxClAL_7szvwZXmhV4XsA2cE',
+                cardExt: '{"timestamp":"<?php echo $signPackage["timestamp"];?>","nonce_str":"<?php echo $signPackage["nonce_str"]; ?>","signature":"<?php echo $signPackage["signature"];?>"}'
+            }], // 需要添加的卡券列表
+            success: function (res) {
+                // alert("wc");
+                // var cardList = res.cardList; // 添加的卡券列表信息
+            }
+        });
+    });
+
+    
+
+  });
+
+
+  
+
+</script>
+</div><script src="__JS__/index/wm.js"></script></body></html>

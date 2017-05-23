@@ -1,0 +1,169 @@
+<extend name="Base/base" />
+
+<block name="special_css">
+
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+
+</block>
+
+<block name="main">
+
+    <!--main-container-part-->
+
+    <div id="content">
+
+        <!--breadcrumbs-->
+
+        <div id="content-header">
+
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+
+            </div>
+
+        </div>
+
+        <!--End-breadcrumbs-->
+
+        <div id="content-body" class="container-fluid">
+
+            <h3>
+                新增云课堂  
+            </h3>
+
+            <form class="form-horizontal" method="POST" action="{:U('CloudCourse/add_update',array('type'=> $type))}" enctype="multipart/from-data">
+
+                <div class="widget-box" style="">
+
+                    <div class="widget-title">
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">云课堂信息</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="widget-content tab-content" style="">
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                云课堂期数: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" value="" style="" name="title" id="title" class="span5"> </div>
+
+                        </div>
+
+                        <div class="control-group">
+
+                            <label for="img_input" class="control-label">
+
+                                系云课堂图片: </label>
+
+                            <div class="controls row">
+
+                                <input id="img_input" name="img_input" type="file" multiple="true">
+
+                                <input type="text" id="banner_img" name="banner_img" style="display:none;">
+
+                            </div>
+
+                            <div id="queue_banner_img" style="margin-left: 140px;"></div>  
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+</block>
+
+<block name="special_js">
+
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+
+    <script type="text/javascript">
+
+    <?php $timestamp = time();?>
+
+        $(function() {            
+
+            $('#img_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_banner_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".banner-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_banner_img").append("<div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#banner_img").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.banner-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    $(document).ready(function() {
+
+        
+
+        /*初始化select表单*/
+
+        $('select').select2();
+
+
+
+    });
+
+
+
+    </script>
+
+</block>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery.min.js"></script>
+<script type="text/javascript" src="__JS__/index/store.js"></script>
+<script type="text/javascript" src="__JS__/layer.js"></script>
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+   .box1,.box2.box3 { float:left; }
+</style>
+<style type="text/css">
+    *{ margin:0px; padding:0px;}
+      .a_active{
+        color: #9900CC;
+      }
+      .a_unactive{
+        color: #808285;
+      }
+      .div_active{
+        background: #099fde;
+      }
+      .div_unactive{
+        background: #f9f9f9;
+      }
+      .wangzhi a:visited{
+        color: #099fde;
+        text-decoration: none;
+      }
+      .wangzhi a:hover{
+        color: #099fde;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #9900CC;
+        text-decoration: none;
+      }
+      .aaa{ height:22px;  color:#666;   font-size:14px;}
+      .left{ float:left;}
+      li{list-style-type:none; display:block;}
+      dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+      }
+      dt {
+        display: block;
+      }
+      dd {
+        display: block;
+        -webkit-margin-start: 40px;
+      }
+      .pmin{ 
+                  padding-top: 10px;
+
+       }
+    </style>
+
+<title>我的任务</title>
+        
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body style="height:2000px;background: #fff;">
+<div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">我的任务</p></div><!-- {$course[0]['title']} -->
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:18702206379"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+
+
+    <div class="fix_height secontent">
+    
+    <div class="img">
+        <img src="__IMG__/Ebshaoer/sr_img1.png" />
+    </div>
+
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 33%;">
+            <a onclick="tab('tab1')" id="mg_a"><font color="red">家长指导</font></a>
+          </div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px;width: 1%;">|</div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 33%;">
+            <a onclick="tab('tab2')" id="og_a" ><font color="red">任务列表</font></a>
+          </div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px;width: 1%;">|</div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 32%; position: relative;">
+            <a onclick="tab('tab3')" id="zd_a"><font color="red">口语</font></a>
+          </div>
+        
+    </div>
+
+
+    
+      <div id="tab1" style="color: black;">
+        <hr style="height:1px;border:none;border-top:1px dashed #9B9C9C;margin-left: 10px;" />
+        <img src="__IMG__/Ebshaoer/mubiao.png"  style="width:80%">
+        <div style="padding-left: 25px;">{$level[0]['parent_step']}</div>
+        <hr style="height:1px;border:none;border-top:1px dashed #9B9C9C;margin-left: 10px;" />
+        <!-- <hr style="margin-top: 1px;margin-bottom: 2px;margin-left:-100px;height:1px;border:none;border-top:1px solid #BDBDBD;" /> -->
+        <!-- 步骤<br/> -->
+        <img src="__IMG__/Ebshaoer/buzhou.png"  style="width:80%">
+        <div style="padding-left: 25px;">{$level[0]['parent_aim']}</div>
+      </div>
+      <br/>
+      <div id="tab2" style="color: black;">
+        <volist name='mission_start' id='vo'>
+          <if condition="$vo['success'] eq '1' ">
+          <a href="{:U('Honey/task_detail',array('mission_id'=>$vo['mission_id'],'member_id'=>$vo['member_id']))}">
+                <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                  <img src="__IMG__/Ebshaoer/suo1.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                    <font size="4px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['title']}</font><!-- 对 -->
+                </div>
+          </a><br/>
+          </if>
+          <if condition="$vo['success'] eq '0' ">
+          <a href="{:U('Honey/task_detail',array('mission_id'=>$vo['mission_id'],'member_id'=>$vo['member_id']))}">
+              <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                  <img src="__IMG__/Ebshaoer/suo2.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                    <font size="4px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['title']}</font><!-- 错 -->
+              </div>
+          </a><br/>
+          </if>
+          <if condition="$vo['success'] eq '3' ">
+          <a href="{:U('Honey/task_detail',array('mission_id'=>$vo['mission_id'],'member_id'=>$vo['member_id']))}">
+              <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                  <img src="__IMG__/Ebshaoer/suo2.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                    <font size="4px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['title']}</font><!-- 过 -->
+              </div>
+          </a><br/>
+          </if>
+          <if condition="$vo['success'] eq NULL">
+            <a href="{:U('Honey/task_detail',array('mission_id'=>$vo['mission_id'],'member_id'=>$vo['member_id'],'jie'=>'1'))}">
+                <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                  <img src="__IMG__/Ebshaoer/suo3.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                    <font size="4px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['title']}</font><!-- 未 -->
+                </div>
+            </a><br/>
+          </if>
+        </volist>
+        <volist name='mission_no' id='vo'>
+          <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+              <img src="__IMG__/Ebshaoer/suo4.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                <font size="4px" color="gray">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['title']}</font>
+          </div>
+        <br/>
+        </volist>
+      </div>
+
+      <div id="tab3" style="color: black;">
+        <volist name='kouyu' id='vo'>
+          <if condition="$vo['success'] eq NULL ">
+            <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                <img src="__IMG__/Ebshaoer/suo3.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                <font size="2px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['kouyu_name']}&nbsp;{$vo['kouyu_time']}</font><!-- 对 -->
+            </div><br/>
+          </if>
+          <if condition="$vo['success'] eq '1' ">
+            <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                <img src="__IMG__/Ebshaoer/suo1.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                <font size="2px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['kouyu_name']}&nbsp;{$vo['kouyu_time']}</font><!-- 对 -->
+            </div><br/>
+          </if>
+          <if condition="$vo['success'] eq '0' ">
+            <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                <img src="__IMG__/Ebshaoer/suo2.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                <font size="2px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['kouyu_name']}&nbsp;{$vo['kouyu_time']}</font><!-- 对 -->
+            </div><br/>
+          </if>
+          <if condition="$vo['success'] eq '3' ">
+            <div class="p_menu img_btn" style="background:#D2D2D2; color:#FF3030;margin-top: -25px;width:90%;margin:0 auto;margin: -13px auto 0px;padding-bottom: 5px;">
+                <img src="__IMG__/Ebshaoer/suo2.jpg" style="width:36px;float:left;border-radius:50%;overflow:hidden;margin-top:-6px;margin-left:20px;"/>
+                <font size="2px" color="black">&nbsp;&nbsp;&nbsp;&nbsp;{$vo['kouyu_name']}&nbsp;{$vo['kouyu_time']}</font><!-- 对 -->
+            </div><br/>
+          </if>
+        </volist>
+      </div>
+
+
+   
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+
+
+   <script>
+   $(document).ready(function() {
+    document.getElementById('tab1').style.display="none";
+    document.getElementById('tab3').style.display="none";
+    });
+   function tab(pid){
+    var tabs=["tab1","tab2","tab3"];
+    for(var i=0;i<3;i++){
+      if(tabs[i]==pid){
+        document.getElementById(tabs[i]).style.display="block";
+      }else{
+        document.getElementById(tabs[i]).style.display="none";
+      }
+    }
+  }
+  </script>
+
+  <script type="text/javascript">
+  
+   $('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+});
+
+});
+</script>
+</div>
+</body>
+</html>

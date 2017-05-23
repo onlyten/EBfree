@@ -1,0 +1,267 @@
+<extend name="Base/base" />
+
+<block name="special_css">
+
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+
+</block>
+
+<block name="main">
+
+    <!--main-container-part-->
+
+    <div id="content">
+
+        <!--breadcrumbs-->
+
+        <div id="content-header">
+
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+
+            </div>
+
+        </div>
+
+        <!--End-breadcrumbs-->
+
+        <div id="content-body" class="container-fluid">
+
+            <h3>
+
+                <if condition="$type eq 0">
+                    <span>修改电台音频系列</span>
+                </if>
+
+                <if condition="$type eq 1">
+                    <span>修改影院视频系列</span>
+                </if>
+
+            </h3>
+
+            <form class="form-horizontal" method="POST" action="{:U('CloudCourse/edit_update',array('serial_id'=> $serial_info['id'],'type'=>$type))}">
+
+                <div class="widget-box" style="">
+
+                    <div class="widget-title">
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">系列信息</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="widget-content tab-content" style="">
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                系列名称: </label>
+
+                            <div class="controls row">
+
+                                <input type="text" 0="" placeholder="" style="" name="title" id="title" class="span5" value="{$serial_info['title']}"> </div>
+
+                        </div>
+
+                        <div class="control-group">
+
+                            <label for="img_input" class="control-label">
+
+                                系列图片: </label>
+
+                            <div class="controls row">
+
+                                <input id="img_input" name="img_input" type="file" multiple="true">
+
+                                <input type="text" id="banner_img" name="banner_img" style="display:none;">
+
+                            </div>
+
+                            <div id="queue_banner_img" style="margin-left: 140px;">
+
+                                <div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'>
+
+                                    <div class='upload-pre-item'>
+
+                                        <img src='{$serial_info['img']}'>
+
+                                        <div class='remove_img'>
+
+                                            <i class='fa fa-times-circle'></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>  
+
+                        </div>
+                        
+                        <div class="control-group">
+
+                            <label for="media_link1" class="control-label">
+
+                                <if condition="$type eq 0">
+                                    音频链接：
+                                </if>
+
+                                <if condition="$type eq 1">
+                                    视频链接：
+                                </if> 
+
+                            </label>
+
+                            <div class="controls row">
+                                <?php $input_id=1?><!--为了区别各输入框-->
+                                <div id="media_link" name="media_link">
+                                <volist name="episode_infos" id="episode_info">
+                                    <div id="media_link" name="media_link">
+                                        <input type="text" 0="" placeholder="" style="width:30px;" value="{$episode_info['episode_id']}"  name="<?php echo('episode_id'.$input_id)?>" id="<?php echo('episode_id'.$input_id)?>" class="span5">
+                                        <input type="text" 0="" placeholder="" style="" value="{$episode_info['link']}" name="<?php echo('media_link'.$input_id)?>" id="<?php echo('media_link'.$input_id)?>" class="span5">
+                                        <input type="button" id="removeButton" value="删除" onclick="remove_media(this)" class="btn">
+                                        <input type="text" style="display:none" name="<?php echo('key_id'.$input_id)?>" id="<?php echo('key_id'.$input_id);$input_id++;?>" value="{$episode_info['id']}">
+                                    </div>
+                                </volist>
+                                </div>
+                                
+                                <if condition="$type eq 0">
+                                    <input type="button" id="addButton" value="添加音频" onclick="add_media()" class="btn">
+                                </if>
+
+                                <if condition="$type eq 1">
+                                    <input type="button" id="addButton" value="添加视频" onclick="add_media()" class="btn">
+                                </if> 
+                                <input type="text" style="display:none" name="media_link_num" id="media_link_num" value="{$media_link_num}">
+
+                            </div>
+
+                            <div class="controls row" id="media_link">
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+        <script type="text/javascript">
+            /*移除音视频链接*/
+            function remove_media(input){
+
+                var id_input=input.parentNode.childNodes[1];//我也不知道为啥第1个输入框是第2个子节点。。。
+                id_input.value="-1";//将episdoe_id置为-1以便提交后删除
+                input.parentNode.style.display="none";
+
+            }
+
+            function add_media(){
+                var media_link_num_input=document.getElementById('media_link_num');
+                var media_link_num=parseInt(media_link_num_input.value)+1;
+                media_link_num_input.value=media_link_num;
+                var content='<div><input type="text" 0="" placeholder="" style="width:30px;" value="" name="episode_id'+media_link_num+'" id="episode_id'+media_link_num+'" class="span5">\r\n';
+                content+='<input type="text" 0="" placeholder="" style="" value="" name="media_link'+media_link_num+'" id="media_link'+media_link_num+'" class="span5">\r\n';
+                content+='<input type="button" id="removeButton" value="删除" onclick="remove_media(this)" class="btn"></div>';
+                $("#media_link").append(content);
+
+            }
+
+
+        </script>
+
+</block>
+
+<block name="special_js">
+
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+
+    <script type="text/javascript">
+
+    <?php $timestamp = time();?>
+
+        $(function() {            
+
+            $('#img_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_banner_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".banner-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_banner_img").append("<div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#banner_img").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.banner-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    $(document).ready(function() {
+
+        
+
+        /*初始化select表单*/
+
+        $('select').select2();
+
+
+
+    });
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.banner-img-box').remove();
+
+    });
+    </script>
+
+</block>
+

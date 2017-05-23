@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+ <!-- 弹出层 加入大黄蜂计划 王超 20160415 test start -->
+ <html style="background:#E5E3DE;font-family:SimHei;">
+ <head>
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/snower.css" media="all">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+    <script type="text/javascript" async="" src="__JS__/index/wtj.js"></script>
+    <script src="__JS__/index/getsignpackage" type="text/javascript"></script>
+    <script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+    <script type="text/javascript" src="__JS__/index/maivl.js"></script>
+    <script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+    <script type="text/javascript" src="__JS__/index/swipe_circle.min.js"></script>
+    <script type="text/javascript" src="__JS__/index/index.js"></script>
+    <style type="text/css">
+        .button.red{
+        border:1px solid #b42323;
+        box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+            background: -webkit-linear-gradient(#e85455, #e85455);
+            background: -o-linear-gradient(#e85455, #e85455);
+            background: linear-gradient(#e85455, #e85455);
+        }
+    </style>
+ </head>
+
+ <body style="margin:0 0 0 0;">
+    <div id="joinclass">
+      <div style="background:#E5E3DE;;font-family:SimHei;margin:0 21px 0 21px;margin-top:30px;">
+        <form enctype="multipart/form-data" name="form1" action="{:U('YellowBee/BigUpdate')}" method="post" >
+            <div style="margin-top:10px;">
+                <input  style="width:100%; height:35px;"  name="name" id="name" placeholder="真实姓名:" value="">
+            </div>
+            <div style="margin-top:10px;">
+                <input  style="width:100%; height:35px;"  name="phone" id="phone" placeholder="手机号码:" value="">
+            </div>
+            <div style="margin-top:10px;">
+                <input  style="width:70%; height:35px;"  name="code" id="code" placeholder="激活码:" value="">
+                <input type="button" class="button red" id="haha" onclick="time(this)" value="发送激活码" style="border-width: 0px; width: 26%; height: 36px;color:#FFFFFF"/>
+            <!-- <button type="button" class="button red" id="haha" style="height: 36px; width: 88px;"><font color="white">发送激活码</font></button> -->
+            </div>
+            <div style="margin-top:10px;">
+                <input  style="width:100%; height:35px;"  name="advan_course" id="advan_course" placeholder="擅长课程：" value="">
+            </div>
+            <div style="margin-top:10px;">
+                <input  style="width:100%; height:35px;"  name="stu_num" id="stu_num" placeholder="学生数量：" value="">
+            </div><br/>
+            <center><input type="checkbox" id="yes" name="yes" value="" checked="checked"/><a href="{:U('Register/agreement')}"><u>同意课程服务协议</u></a></center><br/>
+            <center><button type="submit" style="width:50%; height:30px;background:#CD5555;color:white;margin:0 auto 0 auto;font-size:20px">确认提交</button>
+        </form>
+      </div>
+    </div>
+    <script>
+    
+        $("form").submit( function () {
+            var regBox = {
+                 regMobile : /^0?1[3|4|5|8][0-9]\d{8}$/,//手机
+            }
+            var mobile = document.getElementById("phone").value;
+            var mflag = regBox.regMobile.test(mobile);
+            if (!mflag) {
+                alert("请输入正确的手机号！");
+                return false;
+            };
+            if ($('#name').val() == '') {
+                alert('请输入姓名');
+                return false;
+            };
+            if ($('#code').val() == '') {
+                alert('请输入激活码');
+                return false;
+            };
+            if ($('#advan_course').val() == '') {
+                alert('请输入擅长课程');
+                return false;
+            };
+             if ($('#stu_num').val() == '') {
+                alert('请输入学生数量');
+                return false;
+            };
+        } );
+        
+ </script>
+
+ <!-- 验证码倒计时and手机号的判断 -->
+<script type="text/javascript"> 
+
+    var wait=60;  
+    function time(o) {  
+        if($('#phone').val() != ''){
+            var regBox = {
+                regMobile : /^0?1[3|4|5|8][0-9]\d{8}$/,//手机
+            }
+ 
+            var mobile = document.getElementById("phone").value;
+            var mflag = regBox.regMobile.test(mobile);
+            if (!mflag) {
+                alert("请输入正确的手机号！");
+                return false;
+            }else{
+                if (wait == 0) {  
+                    o.removeAttribute("disabled");            
+                    o.value="免费获证码";  
+                    wait = 60;
+                } else {  
+                    o.setAttribute("disabled", true);  
+                    o.value="重新发送(" + wait + ")";  
+                    wait--;  
+                    setTimeout(function() {  
+                    time(o)  
+                    }, 1000)  
+                }
+            };
+        }else{
+            alert("请先输入手机号！");
+        }
+    }     
+    document.getElementById("haha").onclick=function(){time(this);} 
+
+</script>
+
+</body>
+<html>
+    <!-- 弹出层 加入大黄蜂计划 end -->

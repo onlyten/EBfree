@@ -1,0 +1,28 @@
+<script src="__MATRIX__/js/jquery.min.js"></script> 
+<script src="__MATRIX__/js/jquery.ui.custom.js"></script> 
+<script src="__MATRIX__/js/bootstrap.min.js"></script> 
+<script src="__MATRIX__/js/jquery.gritter.min.js"></script> 
+<script src="__MATRIX__/js/jquery.peity.min.js"></script> 
+<script src="__MATRIX__/js/matrix.js"></script> 
+<script src="__MATRIX__/js/matrix.interface.js"></script> 
+<script src="__MATRIX__/js/matrix.popover.js"></script>
+<script src="__MATRIX__/js/jquery.uniform.js"></script> 
+<script src="__MATRIX__/js/select2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#{$Think.CONTROLLER_NAME}").addClass('active');
+		$("#{$Think.CONTROLLER_NAME}").parents('li').addClass('open');
+
+	if ("{$msg_text}") {
+		/*提示消息*/
+	    $.gritter.add({
+	        title: '提示消息',
+	        text: '{$msg_text}',
+	        class_name: '{$msg_class_name}',
+	        image: '/huatong/Public/Admin/matrix/img/demo/envelope.png',
+	        sticky: false
+	    });
+	};
+		
+	});
+</script>

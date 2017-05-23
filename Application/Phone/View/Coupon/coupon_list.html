@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script src="/huatong/Public/Admin/matrix/js/jquery.min.js"></script> 
+	<script src="/huatong/Public/Phone/wechat/js/jweixin-1.0.0.js"></script> 
+	<title>选择使用的卡券</title>
+</head>
+<body>
+<form name="coupon_select" action="{:U('coupon/user_coupon_consume')}" method="post">
+	<p style="color:red;">已使用：</p>
+    <foreach name="coupon_consume" item="value" key="key">
+	    <php> dump($value); </php>
+	    <input type="checkbox" value="{$value['code']}" name="coupon[]">{$value['coupon_title']}【对应课程名称：{$value['course_title']}】【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】<br>
+    </foreach>
+    <hr/>
+    <p style="color:red;">未开始：</p>
+    <foreach name="coupon_before" item="value" key="key">
+	    <php> dump($value); </php>
+	    <input type="checkbox" value="{$value['code']}" name="coupon[]">{$value['coupon_title']}【对应课程名称：{$value['course_title']}】【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】<br>
+    </foreach>
+    <hr/>
+    <p style="color:red;">已过期：</p>
+    <foreach name="coupon_after" item="value" key="key">
+	    <php> dump($value); </php>
+	    <input type="checkbox" value="{$value['code']}" name="coupon[]">{$value['coupon_title']}【对应课程名称：{$value['course_title']}】【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】<br>
+    </foreach>
+    <hr/>
+    <p style="color:red;">可使用：</p>
+    <foreach name="coupon_valid" item="value" key="key">
+	    <php> dump($value); </php>
+	    <input type="checkbox" value="{$value['code']}" name="coupon[]">
+	    {$value['coupon_title']}【对应课程名称：{$value['course_title']}】【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】<br>
+    </foreach>
+	<button type="submit" name="btn_ok" id="btn_ok" onClick="return confirm('提交之后默认优惠券已使用，确认提交吗？')">提交</button>
+</form>
+<script type="text/javascript"> 
+ function btn_ok(){
+        if(confirm('提交之后默认优惠券已使用，确认提交吗？')){
+          document.getElementById("btn_ok").submit();
+          // window.location = "http://182.92.11.136/carcar/car/index.php/Admin/Factory/factory_list";//跳转
+        }else{
+          return;
+        }
+      }
+</script>
+</body>

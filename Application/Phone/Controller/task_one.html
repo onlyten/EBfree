@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery.min.js"></script>
+<script type="text/javascript" src="__JS__/index/store.js"></script>
+<script type="text/javascript" src="__JS__/layer.js"></script>
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+   .box1,.box2.box3 { float:left; }
+</style>
+<style type="text/css">
+    *{ margin:0px; padding:0px;}
+      .a_active{
+        color: #9900CC;
+      }
+      .a_unactive{
+        color: #808285;
+      }
+      .div_active{
+        background: #099fde;
+      }
+      .div_unactive{
+        background: #f9f9f9;
+      }
+      .wangzhi a:visited{
+        color: #099fde;
+        text-decoration: none;
+      }
+      .wangzhi a:hover{
+        color: #099fde;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #9900CC;
+        text-decoration: none;
+      }
+      .aaa{ height:22px;  color:#666;   font-size:14px;}
+      .left{ float:left;}
+      li{list-style-type:none; display:block;}
+      dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+      }
+      dt {
+        display: block;
+      }
+      dd {
+        display: block;
+        -webkit-margin-start: 40px;
+      }
+      .pmin{ 
+                  padding-top: 10px;
+
+       }
+    </style>
+    <style> 
+      .div-a{ float:left;width:49%;border:1px solid #F00;background:#FF3030;}
+    </style> 
+
+<title>我的任务</title>
+        
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body style="height:2000px">
+<div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">我的任务</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:18702206379"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+
+
+    <div class="fix_height secontent">
+    
+        <div class="img">
+            <img src="__IMG__/Ebshaoer/sr_img1.png" />
+        </div><br/>
+
+        
+        <volist name='course' id='vo'>
+            <if condition="$key%2 eq 0">
+                <div class="div-a" style="margin-top: 18px;width:48%;float:left;"><!-- <img src="__URL__/{$vo['banner_img']}" style="width:100%;"/> --><font color="white" size="4px">111111111</font></div>
+            </if>
+            <if condition="$key%2 eq 1">
+                <div class="div-a" style="margin-top: 18px;width:48%;float:right;"><!-- <img src="__URL__/{$vo['banner_img']}" style="width:100%;"/> --><font color="white" size="4px">222222222</font></div><br/><br/><br/><br/>
+            </if>
+        </volist>
+    </div>
+
+
+    
+
+
+   
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text">EBfree.com</p>
+          <p class="fr footer_text">4008-80-80-80</p>
+      </div>
+
+   </footer>
+
+
+
+   
+
+  <script type="text/javascript">
+  
+   $('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+});
+
+});
+</script>
+</div>
+</body>
+</html>

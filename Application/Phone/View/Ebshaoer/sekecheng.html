@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+
+  <script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+  <script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+
+  <script type="text/javascript" src="__JS__/layer.js"></script>
+  <title>EB少儿课程详情</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+  <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+</head>
+<body onselectstart="return true;" ondragstart="return false;">
+        
+<div  class="container">
+
+  <!-- 头部 -->
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">少儿英语</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+
+    <div id="template" style="display:none;">
+        <div class="fl width4"><p class="font18">少儿英语</p></div>    
+    </div>
+
+    
+
+  <form name="form" action="{:U('sekecheng_update')}" method="post" >
+    <div class="fix_height kecontainer">
+       <div class="video_div width95 pcenter">
+          <!-- <p class="img"><img src="__IMG__/Ebshaoer/kecheng1.png" /></p> -->
+          <iframe src="{$course[0]['video']}" allowtransparency="true" allowfullscreen="true" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0" style="width:100%;height:250px;"></iframe>
+       </div>
+       <div class="title_div">
+          <h3 class="font18">{$course[0]['title']}</h3>
+       </div>
+       <div class="width95 pcenter">
+          <p class="sekc_img"><img src="{$course[0]['detail_img']}" /></p>       
+       </div>
+       <div class="title_div">
+          <h3 class="font18">课程等级</h3>
+       </div>
+       <div class="width95 pcenter clearfix">
+            <ul class="grade_div">
+              <foreach name="levels" item="value" key="key" >
+                 <li class="fl halfwidth">
+                  <if condition="$key eq 0">
+                    <input type="radio" name="level_id" value="{$value['id']}" class="grade_radio" checked>
+                    <img src="{$value['title_img']}" />
+                  </if>
+                  <if condition="$key neq 0">
+                    <input type="radio" name="level_id" value="{$value['id']}" class="grade_radio">
+                    <img src="{$value['title_img']}" />
+                  </if>
+                 </li>           
+              </foreach>          
+            </ul>
+      </div>
+
+          <div class=" width95 pcenter">
+             <div class="grade_div">
+                <p class="img"><img src="{$course[0]['level_img']}" /></p>
+             </div>
+          </div>
+
+        <if condition="$course[0]['foreign'] eq 4 ">
+        <div class="teldiv">
+          <div class="title_div">
+             <h3 class="font18">外教1对1课程时间选择</h3>
+          </div>
+          <div class="pcenter width9">
+              <p>我们将按照您预留的手机号与您联络,<br />请您输入手机号码:</p>
+              <p><input type="text" name="txtphone" id="txtphone" class="input_txt" /></p>
+              <!-- <p class="width6 pcenter"><a href="#" class="btn_tel"> 确认提交电话 </a></p> -->
+          </div>
+        </div>
+        </if>
+          <div class="fullwidth">
+             <input type="hidden" name="openid" value="{$openid}">
+             <input type="hidden" name="url" value="{$url}">
+             <button type="submit" name="btn_ok" id="btn_ok" class="btn_ok" value="确认申请" style="background:#E15865;">确认申请</button>
+          </div>
+      <div>
+        
+      </div>
+
+    </div>
+   </form>
+
+  <!-- 尾部 -->
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width95">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+     <script type="text/javascript"> 
+      $('.question').on('click', function(){  
+    
+        layer.open({
+           type: 1,
+           title: false, //不显示标题
+           area: ['280px', '180px'], //宽高    
+           shadeClose: true, //开启遮罩关闭
+           content:$('#template').html(),
+        });
+
+      });
+   </script>
+</div>
+</body>
+</html>

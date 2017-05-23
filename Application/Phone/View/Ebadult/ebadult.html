@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+
+<script type="text/javascript" src="__JS__/layer.js"></script>
+
+
+<title>EB成人课程</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body onselectstart="return true;" ondragstart="return false;">
+        
+<div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">成人英语</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>成人er英语</a></p></div>
+        </center> 
+    </div>
+
+
+    <div class="fix_height secontent">
+    
+    <div class="img">
+        <img src="__IMG__/Ebshaoer/adult_img.png" />
+    </div><br/>
+    <volist name='adult' id='vo'>
+	    <div class="p_menu img_btn" style="background:#E15865; color:#FF3030;margin-top: -18px;">
+      <center>
+	         <a href="{:U('Ebadult/sekecheng',array('sid'=>$vo['id'],'openid'=>$openid))}"><img src="__URL__/{$vo['banner_img']}" style="width:35%; padding-top: 3px;padding-left: 20px; padding-bottom: 8px;"/>&nbsp;&nbsp;&nbsp;<font color="white" size="3px">{$vo['title']}</font></a>
+      </center>
+	    </div><br/>
+    </volist>
+
+    </div>
+
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i><strong>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+   <script type="text/javascript">
+  
+   $('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+});
+
+});
+   
+   
+
+   </script>
+</div>
+</body>
+</html>

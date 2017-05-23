@@ -1,0 +1,186 @@
+<extend name="Base/base" />
+
+<block name="special_css">
+
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+   <!--  <link href="__STYLE__/time/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+    <link href="__STYLE__/time/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+</block>
+
+<block name="main">
+
+    <!--main-container-part-->
+
+    <div id="content">
+
+        <!--breadcrumbs-->
+
+        <div id="content-header">
+
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+
+            </div>
+
+        </div>
+
+        <!--End-breadcrumbs-->
+
+        <div id="content-body" class="container-fluid">
+
+            <h3>
+
+              <span>修改口语状态</span>
+
+            </h3>
+
+            <form class="form-horizontal" method="POST" action="{:U('usermission/edit_update',array('course_id' => $course_id))}">
+
+                <div class="widget-box" style="">
+
+                    <div class="widget-title">
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">口语状态信息</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="widget-content tab-content" style="">
+                        <div class="control-group">
+
+                            <label class="control-label">口语状态</label>
+
+                            <div class="controls select-div">
+
+                                <select name="success" id="success">
+                                    <if condition="$mission['success'] eq Null">
+                                        <option value="" selected = "selected">未开始</option>
+                                        <option value="1">正确</option>
+                                        <option value="0">错误</option>
+                                        <option value="3">未作答</option>
+                                    </if>
+                                    <if condition="$mission['success'] eq '0'">
+                                        <option value="">未开始</option>
+                                        <option value="1">正确</option>
+                                        <option value="0" selected = "selected">错误</option>
+                                        <option value="3">未作答</option>
+                                    </if>
+                                    <if condition="$mission['success'] eq 1">
+                                        <option value="">未开始</option>
+                                        <option value="1" selected = "selected">正确</option>
+                                        <option value="0">错误</option>
+                                        <option value="3">未作答</option>
+                                    </if>
+                                    <if condition="$mission['success'] eq 3">
+                                        <option value="">未开始</option>
+                                        <option value="1">正确</option>
+                                        <option value="0">错误</option>
+                                        <option value="3" selected = "selected">未作答</option>
+                                    </if>
+                                </select>
+                            <input type="hidden" name="mission_id" value="{$mission_id}">
+                            </div>
+
+                            <label class="control-label">约定时间</label>
+                            <div class="controls input-append date form_datetime" data-date="" data-date-format="yyyy-mm-dd hh:ii p" data-link-field="dtp_input1">
+                                <input size="16" type="text" value="{$mission['kouyu_time']}" name="kouyu_time" readonly style="margin-left: -120px;">
+                                <span class="add-on"><i class="icon-remove"></i></span>
+                                <span class="add-on"><i class="icon-th"></i></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value="" /><br/>
+
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+</block>
+
+<block name="special_js">
+
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+
+    <script type="text/javascript">
+
+    <?php $timestamp = time();?>
+
+    $(document).ready(function() {
+
+
+
+        /*查询条件，表单控件赋初值*/        
+
+        <foreach name="course" item="value" key="key">
+
+            $("#{$key}").val('{$value}');            
+
+        </foreach>
+
+
+
+        /*初始化select表单*/
+
+        $('select').select2();
+
+
+
+    });
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.banner-img-box').remove();
+
+    });
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.detail-img-box').remove();
+
+    });
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.level-img-box').remove();
+
+    });
+
+
+
+    </script>
+
+    <script type="text/javascript" src="__STYLE__/time/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__STYLE__/time/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__STYLE__/time/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__STYLE__/time/js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language:  'cn',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+</script>
+
+</block>
+

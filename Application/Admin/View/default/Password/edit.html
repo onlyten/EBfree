@@ -1,0 +1,69 @@
+<extend name="Base/base" />
+<block name="main">
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            </div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div id="content-body" class="container-fluid">
+            <h3>
+              <span>修改密码</span>
+            </h3>
+            <form class="form-horizontal" method="POST" action="{:U('course/add_update')}">
+                <div class="widget-box" style="">
+                    <div class="widget-title">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">账号信息</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-content tab-content" style="">
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                原密码: </label>
+                            <div class="controls row">
+                                <input type="password" 0="" placeholder="请输入原密码" value="" style="" name="video" id="video" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                新密码: </label>
+                            <div class="controls row">
+                                <input type="password" 0="" placeholder="请输入新密码" value="" style="" name="video" id="video" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                重复输入新密码: </label>
+                            <div class="controls row">
+                                <input type="password" 0="" placeholder="请重复输入新密码" value="" style="" name="video" id="video" class="span5"> </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="btn-0" class="btn btn-success" type="button">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--end-main-container-part-->
+</block>
+<block name="special_js">
+    <script type="text/javascript">    
+        $(document).ready(function() {
+            /*提示消息*/
+            /*$.gritter.add({
+                title: '提示消息',
+                text: '欢迎进入管理后台',
+                class_name: 'success',
+                image: '/huatong/Public/Admin/matrix/img/demo/envelope.png',
+                sticky: false
+            });*/
+
+            /*初始化select表单*/
+            $('select').select2();
+
+        });
+
+    </script>
+</block>

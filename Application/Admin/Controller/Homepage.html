@@ -1,0 +1,523 @@
+<extend name="Base/base" />
+
+<block name="special_css">
+
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+
+</block>
+
+<block name="main">
+
+    <!--main-container-part-->
+
+    <div id="content">
+
+        <!--breadcrumbs-->
+
+        <div id="content-header">
+
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+
+            </div>
+
+        </div>
+
+        <!--End-breadcrumbs-->
+
+        <div id="content-body" class="container-fluid">
+
+            <h3>
+
+              <span>主页轮播图</span>
+
+            </h3>
+
+            <form class="form-horizontal" method="POST" action="{:U('Homepage/info_update')}">
+
+                <div class="widget-box" style="">
+
+                    <div class="widget-title">
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">基本信息</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="widget-content tab-content" style="">
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                图片1：</label>
+
+                            <div class="controls row">
+
+                                <input id="imga_input" name="imga_input" type="file" multiple="true">
+
+                                <input type="text" id="imga" name="imga" style="display:none;" value="{$info['imga']}">
+
+                            </div>
+
+                            <div id="queue_title_img" style="margin-left: 140px;">
+
+                                <div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'>
+
+                                    <div class='upload-pre-item'>
+
+                                        <img src="{$info['imga']}">
+
+                                        <div class='remove_img'>
+
+                                            <i class='fa fa-times-circle'></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>  
+
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                链接1: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="linka" id="linka" class="span5"> </div>
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                图片2：</label>
+
+                            <div class="controls row">
+
+                                <input id="imgb_input" name="imgb_input" type="file" multiple="true">
+
+                                <input type="text" id="imgb" name="imgb" style="display:none;" value="{$info['imgb']}">
+
+                            </div>
+
+                            <div id="queue_title_img" style="margin-left: 140px;">
+
+                                <div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'>
+
+                                    <div class='upload-pre-item'>
+
+                                        <img src="{$info['imgb']}">
+
+                                        <div class='remove_img'>
+
+                                            <i class='fa fa-times-circle'></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>  
+
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                链接2: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="linkb" id="linkb" class="span5"> </div>
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                图片3：</label>
+
+                            <div class="controls row">
+
+                                <input id="imgc_input" name="imgc_input" type="file" multiple="true">
+
+                                <input type="text" id="imgc" name="imgc" style="display:none;" value="{$info['imgc']}">
+
+                            </div>
+
+                            <div id="queue_title_img" style="margin-left: 140px;">
+
+                                <div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'>
+
+                                    <div class='upload-pre-item'>
+
+                                        <img src="{$info['imgc']}">
+
+                                        <div class='remove_img'>
+
+                                            <i class='fa fa-times-circle'></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>  
+
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                链接3: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="linkc" id="linkc" class="span5"> </div>
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <label for="title" class="control-label">
+
+                                图片4：</label>
+
+                            <div class="controls row">
+
+                                <input id="imgd_input" name="imgd_input" type="file" multiple="true">
+
+                                <input type="text" id="imgd" name="imgd" style="display:none;" value="{$info['imgd']}">
+
+                            </div>
+
+                            <div id="queue_title_img" style="margin-left: 140px;">
+
+                                <div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'>
+
+                                    <div class='upload-pre-item'>
+
+                                        <img src="{$info['imgd']}">
+
+                                        <div class='remove_img'>
+
+                                            <i class='fa fa-times-circle'></i>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>  
+
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                链接4: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="linkd" id="linkd" class="span5"> </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--end-main-container-part-->
+
+</block>
+
+<block name="special_js">
+
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/ueditor.config.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/ueditor.all.js"> </script>
+
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+    <script type="text/javascript">
+
+    <?php $timestamp = time();?>
+
+        $(function() {            
+
+            $('#imga_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_title_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".banner-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_title_img").append("<div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#imga").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.banner-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+        });
+
+         $('#imgb_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_detail_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".detail-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_detail_img").append("<div class='upload-img-box detail-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#imgb").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.detail-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+          $('#imgc_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_detail_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".detail-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_detail_img").append("<div class='upload-img-box detail-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#imgc").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.detail-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+
+           $('#imgd_input').uploadifive({
+
+                'auto'             : true,
+
+                'buttonText'      : '上传图片', 
+
+                'formData'         : {
+
+                                       'timestamp' : '<?php echo $timestamp;?>',
+
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+
+                                     },
+
+                'queueID'          : 'queue_detail_img',
+
+                'uploadScript'     : '{:U('course/img_upload')}',
+
+                'onAddQueueItem' : function(file) {
+
+                    $(".detail-img-box").remove();
+
+                },
+
+                'onUploadComplete' : function(file, data) {
+
+                    $("#queue_detail_img").append("<div class='upload-img-box detail-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+
+                    $("#imgd").val(data);
+
+                    $(".complete").hide();
+
+                    $(".remove_img").on('click', function(event) {
+
+                        $(this).parents('.detail-img-box').remove();
+
+                    });
+
+                }
+
+            });
+
+    $(document).ready(function() {
+
+
+        /*初始化select表单*/
+
+        // $("#course_id").val('{$level['course_id']}');  
+
+        $('select').select2(); 
+
+
+    });
+
+
+
+    </script>
+
+
+
+    <script type="text/javascript">  
+
+        var intro = UE.getEditor('intro',{  
+
+            //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个  
+
+           toolbars:[['fontfamily', 'fontsize', '|',
+
+                'justifyleft', 'justifycenter', 'justifyright']],  
+
+            //focus时自动清空初始化时的内容  
+
+            autoClearinitialContent:true,  
+
+            //关闭字数统计  
+
+            wordCount:false,  
+
+            //关闭elementPath  
+
+            elementPathEnabled:false,  
+
+            //默认的编辑区域高度  
+
+            initialFrameHeight:150,
+
+            //默认的编辑区域宽度
+
+            initialFrameWidth:470
+
+            //更多其他参数，请参考ueditor.config.js中的配置项 
+
+        });  
+
+        /*文版编辑器初始化*/
+
+        intro.addListener("ready", function () {
+
+            // editor准备好之后才可以使用
+
+            intro.setContent("{$info['intro']}",false);
+
+        });
+
+    </script>
+
+
+
+    <script type="text/javascript"> 
+
+
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.banner-img-box').remove();
+
+    });
+
+    $(".remove_img").on('click', function(event) {
+
+        $(this).parents('.detail-img-box').remove();
+
+    });
+
+        
+
+    </script>
+
+</block>
+

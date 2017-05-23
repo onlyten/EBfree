@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+
+<script type="text/javascript" src="__JS__/layer.js"></script>
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+</style>
+
+
+<title>我的班级</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body>
+        
+    <div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">我的班级</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:18702206379"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+    <div class="fix_height secontent">
+    
+
+    <!-- 弹出层 帮助 start -->
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+    <!-- 弹出层 帮助 end -->
+
+    <!-- 用户头像 -->
+    <div class="img" style="background-image:url('__IMG__/Ebshaoer/background_img.jpg');background-size:100% 250px;background-repeat:no-repeat;width:100%;height:250px;">
+      <div style="text-align:center; padding-top:6%;">
+          <img src="{$wx_img}" style="width:28%;border-radius:60%;"/><!--原width:28%-->
+          <p><font color="white" size="4px">昵称：{$wx_nickname}</font></p>
+          <!-- <p><font color="white" size="4px">***积分</font></p> -->
+      </div>
+      <div style="text-align:center; padding-top:5%;">
+          <font color="white" size="4px">级别：<if condition="$ta LT 30">小蜜蜂</if><if condition="$ta EGT 30">美校长</if></font><!-- <img src="__IMG__/honey/dengji.png" style="width:28%;"/> -->
+      </div>
+    </div>
+    <!--未注册提示-->
+    <if condition="$is_reg eq 0">
+          <div style="width:100%;height:25px;text-align:center;">
+            <font color=#787878 size="4px">还有课程没加入班级！</font>
+          </div>
+    </if>
+    <if condition="$is_reg eq 1">
+          <div style="width:100%;height:25px;text-align:center;">
+          </div>
+    </if>
+
+    <!--班级列表信息传入 myclass_info-->
+    <section data-role="body">
+      <volist name="myclass_info" id="class_info">
+
+        <if condition="$class_info['is_class_reg'] eq 1">
+          <div style="width:100%;height:100px;background:#D3D3D3;font-family:SimHei;margin-bottom:12px;">
+            <div style="width:20%;height:35px;text-align:left;padding:1px 0px 1px 1%;float:left;">
+              <img src="__IMG__/honey/myclass_member.png" style="width:25%;"/>
+              <font color='#696969' size="3px"><strong>成员</strong></font>
+            </div>
+            <div style="width:60%;height:37px;text-align:left;padding:0px 0px 0px 4%;float:left;">
+              <font color="black" size="4px">{$class_info[class_name]}</font>
+            </div>
+            <div style="width:10%;height:37px;text-align:right;padding:0px 3% 0px 0px;float:right;">
+              <font color="black" size="4px">{$class_info[member_number]}人</font>
+            </div>
+            <div style="width:100%;height:40px;text-align:left">
+              <volist name="class_info[classmate_head]" id="head">
+                <img src="{$head}" style="width:16%;border-radius:60%;padding:0px 0px 0px 0px;margin-left:2%;"/>
+              </volist>
+            </div>
+            <div style="width:10%;height:60px;text-align:right;padding:0px 0px 0px 4%;float:right;">
+            <img onclick="teacher_qrcode({$class_info['class_id']})" src="__IMG__/honey/myclass_arrowright.png" style="width:100%;padding:0px 0px 0px 2%;"/>
+            </div>
+          </div>
+        </if>
+
+        <if condition="$class_info['is_class_reg'] eq 0">
+          <div style="width:100%;height:100px;background:#E9E9E9;font-family:SimHei;margin-bottom:12px;">
+            <div style="width:20%;height:35px;text-align:left;padding:1px 0px 1px 1%;">
+              <img src="__IMG__/honey/myclass_member.png" style="width:25%;"/>
+              <font color='#696969' size="3px"><strong>成员</strong></font>
+            </div>
+            <div style="width:60%;height:37px;text-align:left;padding:0px 0px 0px 4%;float:left;">
+              <font color="black" size="4px">{$class_info[class_name]}</font>
+            </div>
+            <div style="width:70%;height:40px;text-align:left">
+             <img class="joinclass" onclick="joinClass({$class_info['member_level_id']})" src="__IMG__/honey/myclass_star.png" style="width:13%;border-radius:60%;padding:0px 0px 0px 2%;margin-top: -30px;"/>
+            </div>
+          </div>
+        </if>
+        <if condition="$class_info['is_class_reg'] eq -1">
+          <div style="width:100%;height:100px;background:#E9E9E9;font-family:SimHei;margin-bottom:12px;">
+            <div style="width:20%;height:35px;text-align:left;padding:1px 0px 1px 1%;">
+              <img src="__IMG__/honey/myclass_member.png" style="width:25%;"/>
+              <font color='#696969' size="3px"><strong>成员</strong></font>
+            </div>
+            <div style="width:100%;height:40px;text-align:left;padding-top:10px;">
+             <font color='#696969' size="3px"><strong>未缴费！</strong></font>
+            </div>
+          </div>
+        </if>
+      </volist>
+    </section>
+
+    </div>
+
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+   <script type="text/javascript">
+  
+$('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+});
+
+});
+
+//弹出加入班级弹窗 王超 20160330
+function joinClass(member_level_id){
+  //var joinclass_url="/huatong/index.php/Phone/Honey/join_class/member_level_id/"+member_level_id;
+  var joinclass_url="/huatong/index.php/Phone/Honey/after_class_jump/";
+  layer.open({
+    type: 2,
+    title: false,
+    shadeClose: true,
+    //btn:'yes',
+    area: ['100%','70%'],//宽高
+    offset: '60px',//从上方弹出
+    anim: true,//弹出动画
+    shift: 2,//从底部弹出
+    content:[joinclass_url,'yes'],
+  });
+}
+
+//弹出班主任二维码
+function teacher_qrcode(class_id){
+  var url="/huatong/index.php/Phone/Honey/after_class_jump/class_id/"+class_id;
+  layer.open({
+    type: 2,
+    title: false,
+    shadeClose: true,
+    //btn:'yes',
+    area: ['100%','278px'],//宽高
+    offset: '60px',//从上方弹出
+    anim: true,//弹出动画
+    shift: 2,//从底部弹出
+    content:[url,'no'],
+  });
+}
+
+//关闭弹窗并刷新由弹窗调用 王超 20160330
+function closeAndReload(){
+  layer.closeAll();
+  location.reload();
+}
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/stylestyle.css" />
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery.min.js"></script>
+<script type="text/javascript" src="__JS__/index/store.js"></script>
+<script type="text/javascript" src="__JS__/layer.js"></script>
+
+<script src="/huatong/Public/Phone/wechat/js/jweixin-1.0.0.js"></script> 
+
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+   .box1,.box2.box3 { float:left; }
+</style>
+<style type="text/css">
+    *{ margin:0px; padding:0px;}
+      .a_active{
+        color: #9900CC;
+      }
+      .a_unactive{
+        color: #808285;
+      }
+      .div_active{
+        background: #099fde;
+      }
+      .div_unactive{
+        background: #f9f9f9;
+      }
+      .wangzhi a:visited{
+        color: #099fde;
+        text-decoration: none;
+      }
+      .wangzhi a:hover{
+        color: #099fde;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #9900CC;
+        text-decoration: none;
+      }
+      .aaa{ height:22px;  color:#666;   font-size:14px;}
+      .left{ float:left;}
+      li{list-style-type:none; display:block;}
+      dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+      }
+      dt {
+        display: block;
+      }
+      dd {
+        display: block;
+        -webkit-margin-start: 40px;
+      }
+      .pmin{ 
+                  padding-top: 10px;
+
+       }
+    </style>
+    <style>
+      a:hover {text-decoration: underline; color: gray;font-weight:bold;}
+    </style>
+
+<title>我的优惠</title>
+        
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body style="height:2000px;background: #fff;">
+<div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">我的优惠</p></div><!-- {$course[0]['title']} -->
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+
+
+    <div class="fix_height secontent">
+    
+    <div class="img" style="background-image:url('__IMG__/Ebshaoer/background_img.jpg');background-size:100% 250px;background-repeat:no-repeat;width:100%;height:250px;">
+        <div style="text-align:center; padding-top:6%;">
+            <img src="{$wx_img}" style="width:28%;border-radius:60%;"/>
+            <p><font color="white" size="4px">昵称：{$wx_nickname}</font></p>
+        </div>
+    </div>
+
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 33%;">
+            <a onclick="tab('tab1')" id="mg_a" ><font color="red">未使用</font></a>
+          </div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px;width: 1%;">|</div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 33%;">
+            <a onclick="tab('tab2')" id="og_a" ><font color="red">已过期</font></a>
+          </div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px;width: 1%;">|</div>
+          <div class="box1" style="padding:0px 0px 0px 0px;background: #f9f9f9;text-align:center;height:45px;line-height:45px; width: 32%; position: relative;">
+            <a onclick="tab('tab3')" id="zd_a"><font color="red">已使用</font></a>
+          </div>
+        
+    </div>
+
+
+    
+      <div id="tab1" style="color: black;">
+        <!-- 未使用 -->
+        <if condition="$choose eq 2">
+            <foreach name="coupon_valid" item="value" key="key">
+                <!-- <input type="checkbox" value="{$value['code']}" name="coupon[]"> -->
+                  <!-- {$value['coupon_title']}【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】 -->
+
+                  <a href="{:U('Honey/coupon_open',array('card_id'=>$value['card_id'],'code'=>$value['code']))}">
+                    <img src="__URL__/{$value['pic_url']}" style="margin-top:10px">
+                  </a> <br/>
+            </foreach>
+        </if>
+
+
+        <if condition="$choose neq 2">
+          <form name="coupon_select" action="{:U('coupon/user_coupon_consume')}" method="post">
+            <foreach name="coupon_valid" item="value" key="key">
+            <!-- <input type="checkbox" value="{$value['code']}" name="coupon[]">
+              {$value['coupon_title']}【对应课程名称：{$value['course_title']}】【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】<br> -->
+              <div style="background-image:url('__URL__/{$value['pic_url']}');background-size:100% 190px;background-repeat:no-repeat;width:100%;height:200px">
+                <input type="checkbox" value="{$value['code']}" name="coupon[]" id="checkbox_a1[{$key}]" class="chk_1" checked />
+                <label for="checkbox_a1[{$key}]" style="margin: 148px 45% 0px; padding-left: 30px; padding-bottom: 30px;"></label>
+              </div><br/>
+            </foreach>
+            <if condition="$coupon_valid neq null">
+            <div style="width:50%;height:50px;margin:30px auto 0px auto;">
+                <button type="submit" name="btn_ok" id="btn_ok" onClick="return confirm('提交之后默认优惠券已使用，确认提交吗？')" style="width:100%;height:40px;background:#CD5555;color:white;border:none;font-size:20px;">提交
+                </button>
+            </div>
+            </if>
+            <!-- <button type="submit" name="btn_ok" id="btn_ok" onClick="return confirm('提交之后默认优惠券已使用，确认提交吗？')">提交</button> -->
+          <form>
+        </if>
+      </div>
+      <div id="tab2" style="color: black;">
+        <!-- 已过期 -->
+        <foreach name="coupon_after" item="value" key="key"><!-- {$value['coupon_title']} --><!-- 【对应课程名称：{$value['course_title']}】 --><!-- 【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】 -->
+        <a href="{:U('Honey/coupon_open',array('card_id'=>$value['card_id'],'code'=>$value['code']))}">
+          <img src="__URL__/{$value['pic_url']}" style="margin-top:10px"><br/>
+        </a>
+        </foreach>
+      </div>
+      <div id="tab3" style="color: black;">
+        <!-- 已使用 -->
+        <foreach name="coupon_consume" item="value" key="key"><!-- {$value['coupon_title']} --><!-- 【对应课程名称：{$value['course_title']}】 --><!-- 【领取时间：{$value['time']|date="y-m-d G:i:s",###}】【优惠金额：{$value['reduce_cost']}】 -->
+        <a href="{:U('Honey/coupon_open',array('card_id'=>$value['card_id'],'code'=>$value['code']))}">
+          <img src="__URL__/{$value['pic_url']}" style="margin-top:10px"><br/>
+        </a>
+        </foreach>
+      </div>
+
+
+   
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+
+
+   <script>
+   $(document).ready(function() {
+    document.getElementById('tab2').style.display="none";
+    document.getElementById('tab3').style.display="none";
+    });
+   function tab(pid){
+    var tabs=["tab1","tab2","tab3"];
+    for(var i=0;i<3;i++){
+      if(tabs[i]==pid){
+        document.getElementById(tabs[i]).style.display="block";
+      }else{
+        document.getElementById(tabs[i]).style.display="none";
+      }
+    }
+  }
+  </script>
+
+  <script type="text/javascript">
+  
+   $('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+});
+
+});
+</script>
+<script type="text/javascript"> 
+ function btn_ok(){
+        if(confirm('提交之后默认优惠券已使用，确认提交吗？')){
+          document.getElementById("btn_ok").submit();
+          // window.location = "http://182.92.11.136/carcar/car/index.php/Admin/Factory/factory_list";//跳转
+        }else{
+          return;
+        }
+      }
+</script>
+</div>
+</body>
+</html>

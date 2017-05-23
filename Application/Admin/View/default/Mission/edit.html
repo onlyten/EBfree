@@ -1,0 +1,336 @@
+<extend name="Base/base" />
+<block name="special_css">
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+</block>
+<block name="main">
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            </div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div id="content-body" class="container-fluid">
+            <h3>
+              <span>修改任务</span>
+            </h3>
+            <form class="form-horizontal" method="POST" action="{:U('mission/edit_update',array('mission_id' => $mission_id))}">
+                <div class="widget-box" style="">
+                    <div class="widget-title">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">任务信息</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-content tab-content" style="">
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                任务名称: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="title" id="title" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">所属课程：</label>
+                            <div class="controls select-div">
+                                <select name="course_id" id="course_id">
+                                    <foreach name="course" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">所属课程等级：</label>
+                            <div class="controls select-div">
+                                <select name="level_id" id="level_id">
+                                    <foreach name="level" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                视频链接: </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="video" id="video" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                单词: </label>
+                            <div class="controls row">
+                                <script id="words" name="words" type="text/plain"></script>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                句型: </label>
+                            <div class="controls row">
+                                <script id="sentences" name="sentences" type="text/plain"></script>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                问题: </label>
+                            <div class="controls row">
+                                <textarea 0="" placeholder="请输入" type="text" style="height:120px;" name="question" id="question" class=" span5"></textarea> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                A答案图片：</label>
+                            <div class="controls row">
+                                <input id="answer_a_img_input" name="answer_a_img_input" type="file" multiple="true">
+                                <input type="text" id="answer_a_img" name="answer_a_img" style="display:none;">
+                            </div>
+                            <div id="queue_answer_a_img" style="margin-left: 140px;">
+                                <div class='upload-img-box answer-a-img-box' style='margin-bottom: 5px;'>
+                                    <div class='upload-pre-item'>
+                                        <img src='{$mission['answer_a_img']}'>
+                                        <div class='remove_img'>
+                                            <i class='fa fa-times-circle'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                B答案图片：</label>
+                            <div class="controls row">
+                                <input id="answer_b_img_input" name="answer_b_img_input" type="file" multiple="true">
+                                <input type="text" id="answer_b_img" name="answer_b_img" style="display:none;">
+                            </div>
+                            <div id="queue_answer_b_img" style="margin-left: 140px;">
+                                <div class='upload-img-box answer-b-img-box' style='margin-bottom: 5px;'>
+                                    <div class='upload-pre-item'>
+                                        <img src='{$mission['answer_b_img']}'>
+                                        <div class='remove_img'>
+                                            <i class='fa fa-times-circle'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                C答案图片：</label>
+                            <div class="controls row">
+                                <input id="answer_c_img_input" name="answer_c_img_input" type="file" multiple="true">
+                                <input type="text" id="answer_c_img" name="answer_c_img" style="display:none;">
+                            </div>
+                            <div id="queue_answer_c_img" style="margin-left: 140px;">
+                                <div class='upload-img-box answer-c-img-box' style='margin-bottom: 5px;'>
+                                    <div class='upload-pre-item'>
+                                        <img src='{$mission['answer_c_img']}'>
+                                        <div class='remove_img'>
+                                            <i class='fa fa-times-circle'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                D答案图片：</label>
+                            <div class="controls row">
+                                <input id="answer_d_img_input" name="answer_d_img_input" type="file" multiple="true">
+                                <input type="text" id="answer_d_img" name="answer_d_img" style="display:none;">
+                            </div>
+                            <div id="queue_answer_d_img" style="margin-left: 140px;">
+                                <div class='upload-img-box answer-d-img-box' style='margin-bottom: 5px;'>
+                                    <div class='upload-pre-item'>
+                                        <img src='{$mission['answer_d_img']}'>
+                                        <div class='remove_img'>
+                                            <i class='fa fa-times-circle'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">正确答案：</label>
+                            <div class="controls select-div">
+                                <select name="answer" id="answer">
+                                    <foreach name="answer" item="value" key="key">
+                                        <if condition="$mission['answer'] eq $value['id']">
+                                            <option value="{$value['id']}">{$value['title']}</option>
+                                        <else /> <option value="{$value['id']}">{$value['title']}</option>
+                                        </if>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-actions">
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--end-main-container-part-->
+</block>
+<block name="special_js">
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+    <?php $timestamp = time();?>
+        $(function() {            
+            $('#answer_a_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_answer_a_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".answer-a-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_answer_a_img").append("<div class='upload-img-box answer-a-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#answer_a_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.answer-a-img-box').remove();
+                    });
+                }
+            });
+            $('#answer_b_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_answer_b_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".answer-b-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_answer_b_img").append("<div class='upload-img-box answer-b-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#answer_b_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.answer-b-img-box').remove();
+                    });
+                }
+            });
+            $('#answer_c_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_answer_c_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".answer-c-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_answer_c_img").append("<div class='upload-img-box answer-c-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#answer_c_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.answer-c-img-box').remove();
+                    });
+                }
+            });
+            $('#answer_d_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_answer_d_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".answer-d-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_answer_d_img").append("<div class='upload-img-box answer-d-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#answer_d_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.answer-d-img-box').remove();
+                    });
+                }
+            });
+        });
+    $(document).ready(function() {
+
+        /*表单赋初值*/
+        <foreach name="mission" item="value" key="key">
+            $("#{$key}").val('{$value}');            
+        </foreach>
+
+        /*初始化select表单*/
+        $('select').select2();
+
+    });
+
+    </script>
+
+    <script type="text/javascript">  
+        var words = UE.getEditor('words',{  
+            //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个  
+           toolbars:[['fontfamily', 'fontsize', '|',
+                'justifyleft', 'justifycenter', 'justifyright']],  
+            //focus时自动清空初始化时的内容  
+            autoClearinitialContent:false,  
+            //关闭字数统计  
+            wordCount:false,  
+            //关闭elementPath  
+            elementPathEnabled:false,  
+            //默认的编辑区域高度  
+            initialFrameHeight:150,
+            //默认的编辑区域宽度
+            initialFrameWidth:470
+            //更多其他参数，请参考ueditor.config.js中的配置项  
+        });  
+    </script>
+
+    <script type="text/javascript">  
+        var sentences = UE.getEditor('sentences',{  
+            //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个  
+           toolbars:[['fontfamily', 'fontsize', '|',
+                'justifyleft', 'justifycenter', 'justifyright']], 
+            //focus时自动清空初始化时的内容  
+            autoClearinitialContent:false,  
+            //关闭字数统计  
+            wordCount:false,  
+            //关闭elementPath  
+            elementPathEnabled:false,  
+            //默认的编辑区域高度  
+            initialFrameHeight:150,
+            //默认的编辑区域宽度
+            initialFrameWidth:470
+            //更多其他参数，请参考ueditor.config.js中的配置项  
+        });  
+    </script>
+
+    <script type="text/javascript">
+        /*所属课程和所属课程等级联动*/
+        $("#course_id").on('change', function(event) {
+            $('#level_id').html("");
+            <foreach name="level" item="value" key="key">
+                if ("{$value['course_id']}" == $("#course_id").val()) {
+                    $("#level_id").append("<option value='{$value['id']}'>{$value['title']}</option>")
+                };                    
+            </foreach>
+            $('#level_id').select2();
+        });
+
+        // 上传图片右上角删除按钮
+        $(".remove_img").on('click', function(event) {
+            $(this).parents('.upload-img-box').remove();
+        });
+    </script>
+</block>

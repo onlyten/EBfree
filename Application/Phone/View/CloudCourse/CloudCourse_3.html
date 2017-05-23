@@ -1,0 +1,92 @@
+<!--亲子云课堂 王超 20160401-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+		<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+		<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+		<script type="text/javascript" src="__JS__/layer.js"></script>
+		<style type="text/css">
+   			.footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   			.body{ margin-bottom:48px; }
+   			.footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   			.fleft{ float: left; }
+   			.fright{ float: right; }
+   			.width9{ width:90%; margin:0 auto; }
+		</style>
+
+		<title>亲子云课堂</title>
+
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    	<meta content="telephone=no, address=no" name="format-detection">
+    	<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    	<link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    	<link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+	</head>
+
+	<body style="background:#2d629b">
+		<!-- 弹出层 帮助 start -->
+    	<div id="template" style="display:none;">
+        	<center>
+        	<div class="fl"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>亲子云课堂=、=我没有什么可以帮助你的:-)</a></p></div>
+        	</center> 
+    	</div>
+   		<!-- 弹出层 帮助 end -->
+
+		<header data-role="header" class="header " style="background:rgba(0,0,0,0)">
+      		<div class=" width95 pcenter clearfix">
+       			<div class="fl width3 mar10 "><img src="__IMG__/CloudCourse/hicon1.png" /></div>
+				<div class="fl width4"><p class="font18"><font color="white">云课堂</font></p></div>
+   				<div class="fl width25">
+        			<a class="width25 fl showblock question"><img src="__IMG__/CloudCourse/hicon3.png" /></a>
+         			<a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/CloudCourse/hicon2.png" /></a>
+       			</div>
+       		</div> 
+    	</header>		
+
+    	<div style="width:100%;height:70px;"></div><!--只是为了留空-->
+
+		<hr  color="white" size="1px" width="100%" align="center">
+		
+		
+    	<volist name="serial_infos" id="serial_info">
+			<div class="img" style="background-image:url('__IMG__/CloudCourse/redbackground.png');background-size:100% 27px;background-repeat:no-repeat;width:40%;height:27px;margin:9px 0px 0px 4%;">
+				<p><font color="white" size="4px" style="margin-left:15%;">第{$serial_info['title']}期</font></p>
+			</div>
+    		<div style="width:100%;">
+				<img src="{$serial_info['img']}" style="width:92%;margin:0px 4% 9px 4%;"/>
+			</div>
+            <hr  color="white" size="1px" width="100%" align="center">
+		</volist>
+		
+		<div style="width:100%;height:45px;">
+		</div>
+
+    	<footer data-role="footer" class="footer">
+         	<div class="pcenter width9">
+          		<p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          		<p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      		</div>
+      	</footer>
+	</body>
+	<script type="text/javascript">
+  		$('.question').on('click', function(){  
+    		layer.open({
+    			type: 1,
+    			title: false, //不显示标题
+    			area: ['280px', '180px'], //宽高    
+    			shadeClose: true, //开启遮罩关闭
+    			content:$('#template').html(),
+			});
+		});
+	</script>
+</html>

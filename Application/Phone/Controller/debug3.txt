@@ -1,0 +1,1636 @@
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 1 1000 
+kejia11 *** 1 100 
+kejia11 *** 1 100 
+kejia10 *** 0 1000 
+kejia10 *** 0 100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 1 100 
+kejia11 *** 1 1000 
+kejia11 *** 1 1000 
+kejia11 *** 1 100 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia1 *** 0 100 
+kejia11 *** 0 200 
+kejia1 *** 0 100 
+kejia10 *** 0 1000 
+kejia1 *** 0 100 
+kejia10 *** 2 800 
+kejia1 *** 0 100 
+kejia10 *** 1 900 
+kejia1 *** 0 100 
+kejia10 *** 2 800 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia12 *** 10 200 
+kejia12 *** 9 300 
+kejia12 *** 9 300 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 0 1000 
+kejia10 *** 0 100 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia15 *** 1 1400 
+kejia15 *** 1 1400 
+kejia15 *** 1 1400 
+kejia10 *** -2 1200 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia18 *** 1 1700 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia17 *** 0 1700 
+kejia13 *** 0 1300 
+kejia18 *** 0 1800 
+kejia17 *** 0 1700 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia10 *** 0 1000 
+kejia13 *** 0 1300 
+kejia10 *** 0 1000 
+kejia1 *** 0 100 
+kejia10 *** 0 1000 
+kejia11 *** 0 1100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia10 *** 0 1000 
+kejia10 *** 0 100 
+kejia1 *** 0 100 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia11 *** 1 1000 
+kejia11 *** -1 1200 
+kejia11 *** -1 1200 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** -1 1200 
+kejia15 *** 0 1500 
+kejia15 *** 0 1500 
+kejia15 *** 0 1500 
+kejia15 *** 0 1500 
+kejia15 *** 0 1500 
+kejia10 *** 0 1000 
+kejia15 *** 0 1500 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia11 *** 0 1100 
+kejia10 *** 0 1000 
+kejia11 *** 0 1100 
+kejia10 *** 0 1000 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 1 100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia10 *** 1 900 
+kejia10 *** 0 1000 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 0 1000 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia11 *** 2 900 
+kejia11 *** 0 1100 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia1 *** 0 100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+yajinzongshu1005***2
+kejia10 *** 1 900 
+begain
+yajinzongshu1005***2
+yajinzongshu1006***10
+begain
+yajinzongshu1005***2
+yajinzongshu1006***10
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+yajinzongshu1005***2
+yajinzongshu1006***10
+begain
+yajinzongshu1007***2
+begain
+yajinzongshu1006***10
+begain
+yajinzongshu1006***10
+kejia11 *** 0 200 
+kejia11 *** 0 1100 
+begain
+yajinzongshu1007***2
+begain
+yajinzongshu1006***10
+begain
+yajinzongshu1008***11
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+kejia1 *** 0 100 
+kejia10 *** 1 900 
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***10
+begain
+yajinzongshu1010***1
+begain
+yajinzongshu1007***2
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***10
+begain
+yajinzongshu1007***2
+yajinzongshu1012***1
+begain
+yajinzongshu1010***1
+begain
+yajinzongshu1007***2
+yajinzongshu1012***1
+begain
+yajinzongshu1012***1
+kejia1 *** 0 100 
+kejia10 *** 2 800 
+begain
+yajinzongshu1013***1
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***10
+begain
+yajinzongshu1013***1
+begain
+yajinzongshu1010***1
+begain
+yajinzongshu1012***1
+yajinzongshu1014***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1010***1
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1013***1
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***10
+begain
+yajinzongshu1010***1
+yajinzongshu1015***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1010***1
+yajinzongshu1015***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1008***11
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1013***1
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1010***0
+yajinzongshu1015***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***0
+yajinzongshu1009***1
+yajinzongshu1011***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1010***0
+yajinzongshu1015***10
+begain
+yajinzongshu1008***0
+yajinzongshu1009***1
+yajinzongshu1011***0
+yajinzongshu1017***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***0
+yajinzongshu1009***1
+yajinzongshu1011***0
+yajinzongshu1017***10
+begain
+yajinzongshu1010***0
+yajinzongshu1015***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1008***0
+yajinzongshu1009***1
+yajinzongshu1011***0
+yajinzongshu1017***10
+begain
+yajinzongshu1013***1
+begain
+yajinzongshu1008***0
+yajinzongshu1009***1
+yajinzongshu1011***0
+yajinzongshu1017***10
+begain
+yajinzongshu1010***0
+yajinzongshu1015***10
+begain
+yajinzongshu1010***0
+yajinzongshu1015***10
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+begain
+yajinzongshu1012***1
+yajinzongshu1014***0
+yajinzongshu1016***0
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+yajinzongshu1018***2
+begain
+yajinzongshu1018***2
+begain
+yajinzongshu1018***2
+begain
+yajinzongshu1018***2
+kejia11 *** 1 100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia1 *** 0 100 
+kejia11 *** 0 200 
+begain
+yajinzongshu1018***2
+yajinzongshu1020***1
+begain
+yajinzongshu1019***2
+begain
+yajinzongshu1018***2
+yajinzongshu1020***1
+kejia11 *** 1 100 
+begain
+yajinzongshu1020***1
+begain
+kejia10 *** 1 900 
+begain
+yajinzongshu1020***1
+begain
+yajinzongshu1019***2
+yajinzongshu1021***10
+begain
+kejia1 *** 0 100 
+begain
+yajinzongshu1019***2
+yajinzongshu1021***10
+kejia11 *** 3 800 
+begain
+yajinzongshu1022***1
+begain
+yajinzongshu1021***10
+begain
+yajinzongshu1023***11
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 1 900 
+kejia11 *** 2 900 
+begain
+yajinzongshu1023***11
+yajinzongshu1025***10
+begain
+yajinzongshu1024***10
+kejia1 *** 0 100 
+begain
+yajinzongshu1022***1
+yajinzongshu1026***1
+kejia11 *** 2 900 
+begain
+yajinzongshu1021***10
+yajinzongshu1029***11
+begain
+yajinzongshu1018***2
+yajinzongshu1018***2
+yajinzongshu1025***10
+yajinzongshu1028***1
+begain
+yajinzongshu1022***1
+yajinzongshu1026***1
+begain
+yajinzongshu1018***2
+yajinzongshu1018***2
+yajinzongshu1025***10
+yajinzongshu1028***1
+begain
+yajinzongshu1019***2
+yajinzongshu1021***10
+yajinzongshu1019***2
+begain
+yajinzongshu1022***1
+yajinzongshu1026***1
+begain
+yajinzongshu1026***1
+begain
+yajinzongshu1019***2
+yajinzongshu1021***10
+yajinzongshu1019***2
+begain
+yajinzongshu1026***1
+yajinzongshu1030***1
+kejia11 *** 0 1100 
+begain
+yajinzongshu1018***2
+yajinzongshu1018***2
+yajinzongshu1025***10
+yajinzongshu1028***1
+begain
+yajinzongshu1026***1
+yajinzongshu1030***1
+yajinzongshu***
+begain
+yajinzongshu1018***2
+yajinzongshu1018***2
+yajinzongshu1025***10
+yajinzongshu1028***1
+begain
+yajinzongshu1025***10
+yajinzongshu1028***1
+kejia11 *** 1 1000 
+kejia11 *** 1 1000 
+begain
+yajinzongshu1030***1
+yajinzongshu***
+yajinzongshu1033***11
+begain
+yajinzongshu***
+yajinzongshu1033***11
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 0 200 
+begain
+yajinzongshu1034***2
+begain
+yajinzongshu1034***2
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia10 *** 1 900 
+begain
+yajinzongshu1034***2
+yajinzongshu1036***10
+begain
+yajinzongshu1035***2
+kejia10 *** 0 1000 
+begain
+yajinzongshu1034***2
+yajinzongshu1036***10
+kejia11 *** 1 100 
+begain
+yajinzongshu1036***10
+kejia1 *** 0 100 
+kejia10 *** 1 900 
+begain
+yajinzongshu1036***10
+kejia10 *** 1 900 
+begain
+begain
+begain
+yajinzongshu1035***2
+yajinzongshu1039***10
+begain
+yajinzongshu1037***1
+kejia10 *** 0 1000 
+begain
+yajinzongshu1035***2
+yajinzongshu1039***10
+begain
+yajinzongshu1040***11
+begain
+yajinzongshu1039***10
+begain
+yajinzongshu1037***1
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+kejia11 *** 2 900 
+begain
+yajinzongshu1039***10
+yajinzongshu1042***11
+begain
+kejia10 *** 0 1000 
+begain
+kejia10 *** 0 1000 
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+kejia10 *** 0 1000 
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+begain
+yajinzongshu1045***10
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+begain
+yajinzongshu1044***1
+yajinzongshu1047***1
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+begain
+yajinzongshu1045***10
+begain
+yajinzongshu1039***10
+yajinzongshu1042***11
+begain
+yajinzongshu1039***10
+yajinzongshu1042***11
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***10
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1039***10
+yajinzongshu1042***11
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+begain
+yajinzongshu1040***11
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***11
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***11
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***11
+begain
+yajinzongshu1039***10
+yajinzongshu1042***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***11
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1039***10
+yajinzongshu1042***0
+begain
+yajinzongshu1039***10
+yajinzongshu1042***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***11
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1039***10
+yajinzongshu1042***0
+begain
+yajinzongshu1044***1
+yajinzongshu1047***0
+yajinzongshu1048***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***1
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1044***0
+yajinzongshu1047***0
+yajinzongshu1048***0
+begain
+yajinzongshu1039***10
+yajinzongshu1042***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***10
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1044***0
+yajinzongshu1047***0
+yajinzongshu1048***0
+begain
+yajinzongshu1044***0
+yajinzongshu1047***0
+yajinzongshu1048***0
+kejia1 *** 0 100 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+kejia10 *** 0 100 
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1044***0
+yajinzongshu1047***0
+yajinzongshu1048***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1039***0
+yajinzongshu1042***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1040***0
+yajinzongshu1041***0
+yajinzongshu1043***0
+yajinzongshu1049***0
+begain
+yajinzongshu1045***0
+begain
+yajinzongshu1052***10
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 0 200 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+kejia10 *** 1 900 
+kejia10 *** 1 900 
+begain
+begain
+begain
+begain
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+kejia10 *** 0 1000 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+begain
+yajinzongshu1058***2
+kejia11 *** 0 1100 
+kejia10 *** 1 900 
+kejia11 *** 0 200 
+begain
+yajinzongshu1058***2
+yajinzongshu1060***10
+begain
+yajinzongshu1058***2
+yajinzongshu1060***10
+begain
+yajinzongshu1059***2
+begain
+yajinzongshu1059***2
+begain
+yajinzongshu1060***10
+begain
+yajinzongshu1060***10
+begain
+begain
+kejia1 *** 0 100 
+kejia11 *** 2 900 
+begain
+yajinzongshu1062***1
+begain
+yajinzongshu1063***11
+begain
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1062***1
+yajinzongshu1064***11
+kejia11 *** 0 1100 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1063***11
+yajinzongshu1065***10
+kejia10 *** 0 1000 
+begain
+yajinzongshu1066***10
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1066***10
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1063***11
+yajinzongshu1065***10
+begain
+kejia10 *** 0 1000 
+begain
+yajinzongshu1067***1
+begain
+yajinzongshu1066***10
+yajinzongshu1062***1
+yajinzongshu1064***11
+kejia1 *** 0 100 
+kejia10 *** 1 900 
+begain
+yajinzongshu1067***1
+kejia10 *** 1 900 
+begain
+yajinzongshu1066***10
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1067***1
+yajinzongshu1071***10
+kejia1 *** 0 100 
+begain
+yajinzongshu1067***1
+yajinzongshu1071***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1067***1
+yajinzongshu1071***10
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1068***10
+yajinzongshu1073***0
+begain
+yajinzongshu1068***10
+yajinzongshu1073***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***10
+yajinzongshu1074***11
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1069***0
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***11
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***11
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***11
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***11
+begain
+yajinzongshu1063***11
+yajinzongshu1065***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***11
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***11
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***1
+yajinzongshu1064***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1068***10
+yajinzongshu1073***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1068***10
+yajinzongshu1073***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1067***1
+yajinzongshu1071***0
+yajinzongshu1074***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1067***0
+yajinzongshu1071***0
+yajinzongshu1074***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***10
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+begain
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1088***11
+yajinzongshu1090***10
+begain
+yajinzongshu1088***11
+yajinzongshu1090***10
+begain
+yajinzongshu1088***11
+yajinzongshu1090***10
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 0 200 
+kejia11 *** 0 1100 
+begain
+yajinzongshu***
+begain
+yajinzongshu***
+begain
+begain
+begain
+begain
+begain
+begain
+begain
+begain
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 200 
+kejia11 *** 2 900 
+kejia11 *** 2 900 
+begain
+yajinzongshu***
+begain
+yajinzongshu***
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+begain
+begain
+begain
+kejia1 *** 0 100 
+kejia11 *** 2 900 
+kejia1 *** 0 100 
+begain
+yajinzongshu1098***1
+begain
+yajinzongshu1098***1
+begain
+yajinzongshu1097***11
+kejia10 *** 0 1000 
+begain
+yajinzongshu1098***1
+begain
+yajinzongshu1098***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+kejia10 *** 0 1000 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1097***11
+kejia10 *** 0 1000 
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+kejia11 *** 3 800 
+kejia11 *** 3 800 
+kejia10 *** 0 1000 
+begain
+yajinzongshu1109***11
+yajinzongshu1110***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+kejia11 *** 1 1000 
+kejia11 *** 1 1000 
+kejia11 *** 1 100 
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1111***1
+yajinzongshu***
+kejia11 *** 2 900 
+kejia11 *** 2 900 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+kejia11 *** 0 1100 
+begain
+yajinzongshu1089***1
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1089***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1097***11
+yajinzongshu1108***10
+begain
+yajinzongshu1097***11
+yajinzongshu1108***10
+begain
+yajinzongshu1109***11
+yajinzongshu1110***10
+begain
+yajinzongshu1109***11
+yajinzongshu1110***10
+begain
+yajinzongshu1109***11
+yajinzongshu1110***10
+begain
+yajinzongshu1109***11
+yajinzongshu1110***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1089***0
+begain
+yajinzongshu1089***0
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1111***0
+yajinzongshu1113***11
+begain
+yajinzongshu1088***0
+yajinzongshu1090***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***1
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+yajinzongshu***
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+yajinzongshu1121***11
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+yajinzongshu1121***11
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1066***0
+yajinzongshu1062***0
+yajinzongshu1064***0
+yajinzongshu1075***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1109***11
+yajinzongshu1110***0
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+kejia1 *** 0 100 
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1089***0
+begain
+yajinzongshu1089***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1097***11
+yajinzongshu1108***10
+begain
+yajinzongshu1097***0
+yajinzongshu1108***10
+begain
+yajinzongshu1109***0
+yajinzongshu1110***0
+begain
+yajinzongshu1088***0
+yajinzongshu1090***0
+begain
+yajinzongshu1088***0
+yajinzongshu1090***0
+begain
+yajinzongshu1088***0
+yajinzongshu1090***0
+begain
+yajinzongshu1088***0
+yajinzongshu1090***0
+begain
+yajinzongshu1088***0
+yajinzongshu1090***0
+begain
+yajinzongshu1098***1
+yajinzongshu1103***10
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***1
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***0
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***0
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***0
+yajinzongshu1106***0
+begain
+yajinzongshu1098***0
+yajinzongshu1103***0
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+yajinzongshu1121***0
+begain
+yajinzongshu1068***0
+yajinzongshu1073***0
+yajinzongshu1121***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***0
+yajinzongshu1106***0
+begain
+yajinzongshu1063***0
+yajinzongshu1065***0
+yajinzongshu1101***0
+yajinzongshu1106***0
+kejia1 *** 0 100 
+kejia1 *** 0 100 

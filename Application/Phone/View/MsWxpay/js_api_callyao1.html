@@ -1,0 +1,99 @@
+﻿    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+        <title>微信安全支付</title>
+
+    <script type="text/javascript">
+
+	//调用微信JS api 支付
+
+	function jsApiCall()
+
+	{
+
+		
+
+		WeixinJSBridge.invoke(
+
+			'getBrandWCPayRequest',
+
+			{$paraVal},
+
+			function(res){
+
+				WeixinJSBridge.log(res.err_msg);
+
+				window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7e4fb28fe1443248&redirect_uri=http://www.ebfree.com/huatong/index.php/Phone/Honey/honey&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+
+				//alert(res.err_code+res.err_desc+res.err_msg);
+
+			}
+
+		);
+
+	}
+
+
+
+	function callpay()
+
+	{
+
+		//ja = <?php echo $jsApiParameters; ?>;
+
+		//ja = "abc";
+
+		//alert("ja");
+
+
+
+		if (typeof WeixinJSBridge == "undefined"){
+
+		    if( document.addEventListener ){
+
+		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+
+		    }else if (document.attachEvent){
+
+		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+
+		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+
+		    }
+
+		}else{
+
+		    jsApiCall();
+
+		}
+
+	}
+
+	</script>
+
+	
+
+    </head>
+
+    <body onload="callpay()">
+
+        <!-- </br></br></br></br>
+
+        <div align="center">
+
+
+
+		   
+
+            <button style="width:410px; height:90px; background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:39px;" type="button" onclick="callpay()" >点击支付</button>
+
+        </div> -->
+
+    </body>
+
+    </html>

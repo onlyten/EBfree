@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+	<title>警告详情</title>
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">   
+
+<meta content="telephone=no, address=no" name="format-detection">
+
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+</head>
+
+<body style="text-align:center" bgcolor="#e9e2da">
+
+<font size="5px">全部</font><br/><br/>
+
+<div align="center" style="text-align:center">
+
+	<volist name="mission_all" id="vo">
+
+        <table  border="1" width="80%" cellspacing="0" bordercolor="#CCCCCC" style="margin-left:10%;">
+
+          <tr>
+
+            <td  width="60%" style="background:#737474;padding-top: 8px; padding-bottom: 8px;"><font color="white">{$vo.1}</font></td>
+
+            <td style="background:#737474;padding-top: 8px; padding-bottom: 8px;"><font color="white">发生时间</font></td>
+
+          </tr>
+
+          <tr>
+
+            <td width="60%" style="padding-top: 8px; padding-bottom: 8px;">第一次</td>
+
+            <td style="padding-top: 8px; padding-bottom: 8px;">{$vo.2}</td>
+
+          </tr>
+
+          <tr>
+
+            <td width="60%" style="padding-top: 8px; padding-bottom: 8px;">第二次</td>
+
+            <td style="padding-top: 8px; padding-bottom: 8px;">{$vo.3}</td>
+
+          </tr>
+
+        </table><br/>
+
+    </volist>
+
+</div>
+
+<div align="center">
+
+	押金余额：{$yue}元<br/><br/>
+
+	<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7e4fb28fe1443248&redirect_uri=http://www.ebfree.com/huatong/index.php/Phone/Honey/honey&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+
+	<button style="width:130px; height:40px; background-color:#e95455; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="button" >立即去上课</button></a>
+
+</div>
+
+</body>
+
+</html>

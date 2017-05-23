@@ -1,0 +1,49 @@
+<extend name="Base/base" />
+<block name="header">
+    <link rel="stylesheet" href="__MATRIX__/css/matrix-login.css" />
+</block>
+<block name="left">
+</block>
+<block name="main">
+    <div id="loginbox" class="shadow">
+        <form id="loginform" class="form-vertical" action="{:U('login/check')}" method="post">
+            <div class="control-group normal_text">
+                <h3><!-- <img src="img/logo.png" alt="EB-Free英语管理后台" /> -->EB-Free英语管理后台</h3></div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="main_input_box">
+                        <span class="add-on bg_lg"><i class="icon-user"></i></span>
+                        <input type="text" name="username" placeholder="登录名" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="main_input_box">
+                        <span class="add-on bg_ly"><i class="icon-lock"></i></span>
+                        <input type="password" name="password" placeholder="登录密码" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <!-- <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span> -->
+                <span class="pull-right"><button type="submit" class="btn btn-success" /> 登陆</button></span>
+            </div>
+        </form>
+        <form id="recoverform" action="#" class="form-vertical">
+            <p class="normal_text">Enter your e-mail address below and we will send you instructions how to recover a password.</p>
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lo"><i class="icon-envelope"></i></span>
+                    <input type="text" placeholder="E-mail address" />
+                </div>
+            </div>
+            <div class="form-actions">
+                <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Back to login</a></span>
+                <span class="pull-right"><a class="btn btn-info"/>Reecover</a></span>
+            </div>
+        </form>
+    </div>
+</block>
+<block name="footer">
+</block>

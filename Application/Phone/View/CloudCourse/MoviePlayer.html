@@ -1,0 +1,105 @@
+<!--亲子云课堂 王超 20160405-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+		<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+		<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+		<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+		<script type="text/javascript" src="__JS__/layer.js"></script>
+		<style type="text/css">
+   			.footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   			.body{ margin-bottom:48px; }
+   			.footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   			.fleft{ float: left; }
+   			.fright{ float: right; }
+   			.width9{ width:90%; margin:0 auto; }
+   			.gradient{ width:100%; height:500px; background: -webkit-gradient(linear,0 0,0 bottom,from(#fbc723),to(#fee907));}
+		</style>
+
+		<title>蜜蜂影院</title>
+
+		  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    	<meta content="telephone=no, address=no" name="format-detection">
+    	<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    	<link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    	<link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+	</head>
+
+	<body class="gradient">
+		<!-- 弹出层 帮助 start -->
+    	<div id="template" style="display:none;">
+        	<center>
+        	<div class="fl"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>亲子云课堂=、=我没有什么可以帮助你的:-)</a></p></div>
+        	</center> 
+    	</div>
+   		<!-- 弹出层 帮助 end -->
+      
+      <!--播放器界面-->
+    	<div style="width:100%;background:black;">
+          <div style="width:100%;height:108px;background-image:url('__IMG__/Ebshaoer/top.png');background-size:100% 108px;background-repeat:no-repeat;">
+              <img src="__IMG__/CloudCourse/hicon1.png" style="width:30%;float:right;margin-top:64px;margin-right:2.5%"/>
+          </div>
+
+            <iframe id="MovieVideo" src="{$episode_list[0]['episode_link']}" allowtransparency="false" allowfullscreen="true" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0" style="width:100%;height:210px;"></iframe>
+
+          <div style="width:100%;height:84px;background-image:url('__IMG__/Ebshaoer/buttom.png');background-size:100% 84px;background-repeat:no-repeat;">
+              <div style="width:60%;height:30px;padding:40px 0px 0px 5px;float:left;">
+                <p><font color="white" size="4px">{$episode_list[0]['serial_title']}</font></p>
+              </div>
+              <a href="{:U('Honey/dashang',array('openid'=>$openid,'serial_id'=>$episode_list[0]['serial_id']))}">
+                <div style="width:35%;height:70px;float:right">
+                  <img src="__IMG__/CloudCourse/pay_fee.png" style="width:60px;padding:12px 24px 0px 0px;float:right;"/>
+                </div>
+              </a>
+          </div>
+      </div>
+
+      <!--选集-->
+      <div style="width:100%;height:5px"></div><!--留空-->
+      <volist name="episode_list" id="episode" mod="5">
+            <eq name="mod" value="4">
+                <div onclick="MoviePlayer('{$episode['episode_link']}')" style="width:20%;height:60px;text-align:center;float:left;border-bottom:1px solid white;">
+                  <p style="margin-top:19px;"><font color="white" size="4px">{$episode['episode_id']}</font></p>
+                </div>
+            <else/>
+                <div onclick="MoviePlayer('{$episode['episode_link']}')" style="width:20%;height:60px;text-align:center;float:left;border-bottom:1px solid white;">
+                  <div style="width:1px;height:60px;float:right;background:white"></div>
+                  <p style="margin-top:19px;"><font color="white" size="4px">{$episode['episode_id']}</font></p>
+                </div>
+            </eq>
+      </volist>
+
+    	<footer data-role="footer" class="footer">
+         	<div class="pcenter width9">
+          		<p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          		<p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      		</div>
+      	</footer>
+	</body>
+	<script type="text/javascript">
+  		$('.question').on('click', function(){  
+    		layer.open({
+    			type: 1,
+    			title: false, //不显示标题
+    			area: ['280px', '180px'], //宽高    
+    			shadeClose: true, //开启遮罩关闭
+    			content:$('#template').html(),
+			});
+		});
+
+    //单击集数后再开始播放
+    function MoviePlayer(episode_link){
+      var MovieVideo=document.getElementById('MovieVideo');
+      MovieVideo.src=episode_link;
+    };
+	</script>
+</html>

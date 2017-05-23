@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+
+<script type="text/javascript" src="__JS__/layer.js"></script>
+<style type="text/css">
+   .icon-1{
+     background-image: url("__IMG__/honey/1.png");
+     width: 31px;
+     
+     margin:0 auto;
+     background-size: 100%;
+   } 
+   .icon-2{
+     background-image: url("__IMG__/honey/2.png");
+     width: 31px;    
+     margin:0 auto;
+     background-size: 100%;
+   }
+
+   .icon-3{
+     background-image: url("__IMG__/honey/3.png");
+     width: 31px;    
+     margin:0 auto;
+     background-size: 100%;
+   }
+   .icon-4{
+     background-image: url("__IMG__/honey/4.png");
+     width: 31px;    
+     margin:0 auto;
+     background-size: 100%;
+   }
+   .icon-5{
+     background-image: url("__IMG__/honey/5.png");
+     width: 31px;    
+     margin:0 auto;
+     background-size: 100%;
+   }
+   .icon-6{
+     background-image: url("__IMG__/honey/6.png");
+     width: 31px;    
+     margin:0 auto;
+     background-size: 100%;
+   }
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+</style>
+
+
+<title>我的蜂巢</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+                
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+    <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body onselectstart="return true;" ondragstart="return false;">
+        
+<div  class="container">
+    <header data-role="header" class="header ">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18">我的蜂巢</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+    <!-- 弹出层 start -->
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+    <!-- 弹出层 end -->
+
+    <div class="fix_height secontent">
+    
+    <!-- 用户头像 -->
+    <div class="img" style="background-image:url('__IMG__/Ebshaoer/background_img.jpg');background-size:100% 250px;background-repeat:no-repeat;width:100%;height:250px;">
+      <div style="text-align:center; padding-top:6%;">
+          <img src="{$wx_img}" style="width:28%;border-radius:50%;"/>
+          <p><font color="white" size="4px">昵称：{$wx_nickname}</font></p>
+          <!-- <p><font color="white" size="4px">***积分</font></p> -->
+      </div>
+      <div style="text-align:center; padding-top:5%;">
+          <font color="white" size="4px">级别：<if condition="$ta LT 30">小蜜蜂</if><if condition="$ta EGT 30">美校长</if></font><!-- <img src="__IMG__/honey/dengji.png" style="width:28%;"/> -->
+      </div>
+    </div>
+
+    
+
+    <div style="width:100%;">
+      <center>
+      <table border="1" style="border-width: 0px;text-align:center;color:black" cellspacing="0" bordercolor="#CCCCCC">
+
+      <tr>
+        <td style="border-top-width: 0px; padding-top: 0px; padding-left: 0px; border-left-width: 0px;width: 200px; height: 70px;">
+          <a href="{:U('Honey/task_one',array('openid' => $openid))}">
+          <if condition="$change eq 1">
+            <img src="__IMG__/honey/1.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的任务
+          </if>
+          <if condition="$change eq 2">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="__IMG__/honey/1.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的任务<img src="__IMG__/honey/red.png" style="width:12px;margin-top:-25px">
+          </if>
+          </a>
+        </td>
+        
+        <td style="border-top-width: 0px; padding-top: 0px; padding-right: 0px; border-right-width: 0px;width: 200px; height: 70px;">
+          <a href="{:U('Honey/my_class',array('openid' => $openid,'ta' => $ta))}">
+          <img src="__IMG__/honey/2.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的班级
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border-left-width: 0px; padding-left: 0px;width: 200px; height: 70px;">
+          <a href="{:U('Honey/red_packet',array('openid' => $openid))}">
+          <img src="__IMG__/honey/3.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的红包
+          </a>
+        </td>
+
+        <td style="padding-right: 0px; border-right-width: 0px;width: 200px; height: 70px;">
+          <a href="{:U('Honey/deposit',array('openid' => $openid))}">
+          <img src="__IMG__/honey/4.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的押金
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border-bottom-width: 0px; padding-bottom: 0px; padding-left: 0px; border-left-width: 0px;width: 200px; height: 70px;">
+        <a href="{:U('Honey/youhui',array('open_id'=>$openid,'choose'=>'2'))}">
+          <img src="__IMG__/honey/5.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;我的优惠
+        </a>
+        </td>
+        <td style="padding-right: 0px; border-right-width: 0px; border-bottom-width: 0px; padding-bottom: 0px;width: 200px; height: 70px;">
+          <a href="{:U('Honey/advertise')}">
+          <img src="__IMG__/honey/6.png" style="width:30px;vertical-align:middle;">&nbsp;&nbsp;推广链接
+          </a>
+        </td>
+      </tr>
+
+      </table>
+      </center>
+    </div>
+    <!-- <section data-role="body" class="body">
+                <div class="index_list" id="indexList">
+            <ul>
+                <li>
+                    <a href="{:U('Honey/task_one',array('openid' => $openid))}">
+                        <i class="icon-1"></i>
+                        <p>我的任务</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-2"></i>
+                        <p>我的班级</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-3"></i>
+                        <p>我的红包</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+	                    <i class="icon-4"></i>
+	                    <p>我的押金</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-5"></i>
+                        <p>我的优惠</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    	<i class="icon-6"></i>
+                        <p>推广链接</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+
+    </div>
+
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+
+   <script type="text/javascript">
+  
+   $('.question').on('click', function(){  
+    
+layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').ht

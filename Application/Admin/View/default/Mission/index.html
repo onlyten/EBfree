@@ -1,0 +1,270 @@
+<extend name="Base/base" />
+<block name="special_css">
+</block>
+<block name="main">
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            </div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div id="content-body" class="container-fluid">
+            <h3>
+              <span>任务管理</span>
+            </h3>
+            <div class="row-fluid hide" id="search_condition">
+                <div class="span12">
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"> <i class="icon-search"></i> </span>
+                            <h5>填写查询条件</h5>
+                        </div>
+                        <div class="widget-content nopadding">
+                            <form novalidate="novalidate" id="basic_validate" name="basic_validate" action="{:U('mission/index')}" method="post" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label">任务名称</label>
+                                    <div class="controls">
+                                        <input type="text" id="title" name="title">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">所属课程</label>
+                                    <div class="controls select-div">
+                                        <select name="course_id" id="course_id">
+                                            <option value="*">全部</option>
+                                            <foreach name="course" item="value" key="key">
+                                                <option value="{$value['id']}">{$value['title']}</option>
+                                            </foreach>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">所属等级</label>
+                                    <div class="controls select-div">
+                                        <select name="level_id" id="level_id">
+                                            <option value="*">全部</option>
+                                            <foreach name="level" item="value" key="key">
+                                                <option value="{$value['id']}">{$value['title']}</option>
+                                            </foreach>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="pull-right offset-right">
+                                        <input type="submit" class="btn btn-success" value="查询">
+                                        <button class="btn btn-primary" type="reset">清空</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid content-with-header">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"> <i class="icon-list-ul"></i> </span>
+                        <a class="btn btn-mini btn-primary offset-left pull-left" href="{:U('mission/add')}"><i class="icon-plus"></i> 新建</a>
+                        <a class="btn btn-mini btn-danger  offset-left pull-left" id="delete_batch" href="javascript:void(0)"><i class="icon-trash"></i> 删除</a>
+                        <!-- <div class="btn-group pull-left offset-left">
+                            <a data-url="/Portal/Weixin/delete.html" class="btn btn-mini btn-danger batch-operate" href="javascript:void(0);">删除</a>
+                            <a data-url="/Portal/Weixin/setStatus/status/0.html" class="btn btn-mini btn-warning batch-operate" href="javascript:void(0);">禁用</a>
+                            <a data-url="/Portal/Weixin/setStatus/status/1.html" class="btn btn-mini btn-success batch-operate" href="javascript:void(0);">启用</a>
+                        </div> -->
+                        <div class="btn-group pull-right offset-right">
+                            <a class="btn btn-mini btn-warning  offset-left pull-left" href="javascript:void(0)" id="search_btn"><i class="icon-chevron-down"></i> 展开查询条件</a>
+                        </div>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <table id="data-list" class="table table-hover table-striped with-check">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" name="item-check" class="item-check check-all" value="">
+                                    </th>
+                                    <th class="data-cell">编号</th>
+                                    <th class="data-cell">任务名称</th>
+                                    <th class="data-cell">所属课程名称</th>
+                                    <th class="data-cell">所属等级名称</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="mission" item="value" key="key">
+                                    <tr data-id="{$value['id']}">
+                                        <td>
+                                            <div class="row-checker"><span><input type="checkbox" name="item-check-batch" value="{$value['id']}" class="item-check"></span>
+                                            </div>
+                                        </td>
+                                        <td class="data-cell">{$value['id']}</td>
+                                        <td class="data-cell">{$value['title']}</td>
+                                        <td class="data-cell">{$value['course_title']}</td>
+                                        <td class="data-cell">{$value['level_title']}</td>
+                                        <td>
+                                            <div class="btn-group table-hover-show">
+                                                <a class="btn btn-mini btn-primary" href="{:U('mission/edit',array('mission_id' => $value['id']))}">编辑</a>
+                                                <button class="btn btn-mini btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu left">
+                                                    <li><a class="ajax-get" href="{:U('mission/delete',array('mission_id' => $value['id']))}">删除</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </foreach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+                    <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers" id="DataTables_Table_0_paginate">
+                        <a class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default" tabindex="0" id="DataTables_Table_0_first" href="{:U('mission/index',array('page_num'=>1))}" data-page="1">首页</a><a class="previous fg-button ui-button ui-state-default" tabindex="0" id="DataTables_Table_0_previous" href="{:U('mission/index',array('page_num'=>$page_num-1))}" data-page="{$page_num-1}">前一页</a>
+                        <span>
+                        <!-- 总数小于5页 -->
+                        <if condition="$page_sum elt 5">
+                            <for start="1" end="$page_sum" comparison="elt" step="1" name="i" >
+                                
+                                    <a class="fg-button ui-button ui-state-default tabindex="0" data-page="{$i}" href="{:U('mission/index',array('page_num'=>$i))}">{$i}</a>
+                            </for>
+                        <!-- 总数大于5页 -->
+                        <else />
+                            <!-- 当前页小于3，当前页不能处于中间位置，当前页处于中间偏后 -->
+                            <if condition="$page_num lt 3">
+                                <for start="1" end="5" comparison="elt" step="1" name="i" >
+                                    
+                                        <a class="fg-button ui-button ui-state-default tabindex="0" data-page="{$i}" href="{:U('mission/index',array('page_num'=>$i))}">{$i}</a>
+                                    
+                                </for>
+                            <!-- 当前页大于总页数-2，当前页不能处于中间位置，当前页处于中间偏前 -->
+                            <elseif condition="$page_num gt $page_sum-2"/>
+                                <for start="$page_sum-4" end="$page_sum" comparison="elt" step="1" name="i" >
+                                    
+                                        <a class="fg-button ui-button ui-state-default tabindex="0" data-page="{$i}" href="{:U('mission/index',array('page_num'=>$i))}">{$i}</a>
+                                    
+                                </for>
+                            <!-- 当前页处于中间位置 -->
+                            <else />
+                                <for start="$page_num-2" end="$page_num+2" comparison="elt" step="1" name="i" >
+                                    
+                                        <a class="fg-button ui-button ui-state-default tabindex="0"  data-page="{$i}" href="{:U('mission/index',array('page_num'=>$i))}">{$i}</a>
+                                    
+                                </for>
+
+                            </if>
+
+
+                        </if>
+
+                       <!--  <a class="fg-button ui-button ui-state-default ui-state-disabled" tabindex="0"  href="{:U('mission/index',array('page_num'=>1))}">1</a><a class="fg-button ui-button ui-state-default" tabindex="0"  href="{:U('mission/index',array('page_num'=>2))}">2</a><a class="fg-button ui-button ui-state-default" tabindex="0"  href="{:U('mission/index',array('page_num'=>3))}">3</a><a class="fg-button ui-button ui-state-default" tabindex="0"  href="{:U('mission/index',array('page_num'=>4))}">4</a><a class="fg-button ui-button ui-state-default" tabindex="0"  href="{:U('mission/index',array('page_num'=>5))}">5</a> -->
+                        </span>
+                        <a class="next fg-button ui-button ui-state-default" tabindex="0" id="DataTables_Table_0_next" href="{:U('mission/index',array('page_num'=>$page_num+1))}" data-page="{$page_num+1}">后一页</a><a class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default" tabindex="0" id="DataTables_Table_0_last" href="{:U('mission/index',array('page_num'=>$page_sum))}" data-page="{$page_sum}">最后一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end-main-container-part-->
+</block>
+<block name="special_js">
+    <script type="text/javascript">
+    $(document).ready(function() {
+        /*分页，当前页disabled；如果是第一页:前一页disabled；如果是最后一页:后一页disabled；*/
+        $("a[data-page='{$page_num}']").addClass('ui-state-disabled');
+        $("a[data-page='{$page_num}']").attr('href', 'javascript:void(0)');
+        if ({$page_num} == 1) {
+            $("#DataTables_Table_0_previous").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_previous").attr('href', 'javascript:void(0)');
+        };
+        if ({$page_num} == {$page_sum}) {
+            $("#DataTables_Table_0_next").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_next").attr('href', 'javascript:void(0)');
+        };
+
+        /*查询不到结果，第一页、前一页、后一页、最后一页disabled*/
+        if ({$page_sum} == 0) {
+            $("#DataTables_Table_0_next").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_next").attr('href', 'javascript:void(0)');
+            $("#DataTables_Table_0_previous").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_previous").attr('href', 'javascript:void(0)');
+            $("#DataTables_Table_0_last").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_last").attr('href', 'javascript:void(0)');
+            $("#DataTables_Table_0_first").addClass('ui-state-disabled');
+            $("#DataTables_Table_0_first").attr('href', 'javascript:void(0)');
+        };
+
+        /*查询条件，表单控件赋初值*/
+        
+        <foreach name="user_map" item="value" key="key">
+            $("#{$key}").val('{$value}');            
+        </foreach>
+        if ('{$map}' != '') {
+            /*如果不是分页搜索，隐藏查询条件*/
+            // $('#search_btn').click();   
+        };
+
+        /*初始化select表单*/
+        $('select').select2();
+
+
+
+    });
+    $('#search_btn').toggle(
+        function() {
+            $(this).html("<i class='icon-chevron-up'></i> 关闭查询条件");
+            $('#search_condition').slideDown();
+        },
+        function() {
+            $(this).html("<i class='icon-chevron-down'></i> 展开查询条件");
+            $('#search_condition').slideUp();
+        }
+
+    );
+    $(".check-all").on('click', function() {
+        if ($(this).attr('checked') == 'checked') {
+            $(".item-check").attr('checked', 'checked');
+        } else {
+            $(".item-check").removeAttr('checked');
+        };
+    });
+
+    $("#delete_batch").on('click', function(event) {
+        if(confirm("确定删除所选数据？")){
+            var mission_id_array = new Array(); 
+            $("input:checked[name='item-check-batch']").each(function(index, el) {
+                mission_id_array[index] = $(this).val();
+            });
+            var mission_id = JSON.stringify(mission_id_array); 
+            $.ajax({
+                type: "POST",
+                url: "{:U('mission/delete_batch')}",
+                data: "mission_id="+mission_id,
+                success: function(msg){
+                    window.location.href="{:U('mission/index')}?msg_text="+msg['msg_text']+"&msg_class_name="+msg['msg_class_name'];
+                }
+            });
+        }else{
+            return;
+        }
+        
+    });
+
+    </script>
+
+    <script type="text/javascript">
+        /*所属课程和所属课程等级联动*/
+        $("#course_id").on('change', function(event) {
+            $('#level_id').html("");
+            $("#level_id").append("<option value='*'>全部</option>")
+            <foreach name="level" item="value" key="key">
+                if ("{$value['course_id']}" == $("#course_id").val()) {
+                    $("#level_id").append("<option value='{$value['id']}'>{$value['title']}</option>")
+                };                    
+            </foreach>
+            $('#level_id').select2();
+        });
+    </script>
+
+
+</block>

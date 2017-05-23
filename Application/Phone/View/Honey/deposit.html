@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="__CSS__/pstyle.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+<script type="text/javascript" src="__JS__/layer.js"></script>
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+</style>
+
+
+<title>我的押金</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">         <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+  <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+  </head>
+
+
+  <body onselectstart="return true;" ondragstart="return false;">
+        
+<div  class="container">
+    <header data-role="header" class="header" style="background-color: rgb(232, 50, 40);">
+      <div class=" width95 pcenter clearfix">
+       <div class="fl width3 mar10 "><img src="__IMG__/Ebshaoer/hicon1.png" /></div>
+
+       <div class="fl width4"><p class="font18" style="color:white;">我的押金</p></div>
+   
+       <div class="fl width25">
+          <a class="width25 fl showblock question"><img src="__IMG__/Ebshaoer/hicon3.png" /></a>
+          <a class="width7 fr showblock" href="tel:__PHONE__"><img src="__IMG__/Ebshaoer/hicon2.png" /></a>
+       </div>
+       </div> 
+    </header>
+    <!-- 弹出层 start -->
+    <div id="template" style="display:none;">
+        <center>
+        <div class="fl width4"><p style="text-align:center;"><a href="http://www.baidu.com"><font size="3px" color="red";>少儿er英语</a></p></div>
+        </center> 
+    </div>
+
+    <div id="templat" style="display:none;" >
+    <center>
+    <form onsubmit="return checkForm()" action="{:U('tuihuan')}" method="post" style="background-color:#e9e2da;">
+      <font size="4px">请选择您已报名并需要退换的课程</font><br/><br/>
+        <select name="course" id="course" style="width:70%;padding:5px 0px;">
+        <!-- <option value="1">请选择</option> -->
+            <volist name='kecheng' id='vo'>
+              <option value="{$vo['level_id']}">{$vo['course_title']}</option>
+            </volist>
+        </select><br/><br/>
+        <font size="4px">确认退换此课程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+			<label class="radio-inline">
+				<input type="radio" name="tui" id="tui" value="1"> 是
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="tui" id="tui" value="0" checked="checked"> 否
+			</label><br/><br/>
+		<input type="hidden" name="openid" value="{$openid}">
+        <input type="text" name="reason" id="reason" placeholder="退换原因" value="" style="width:70%;padding: 5px 0px;"><br/><br/><br/>
+        <button style="width:130px; height:40px; background-color:#e95455; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="submit" >确认提交</button>
+	</form>
+    </center>
+    </div>
+    <!-- 弹出层 end -->
+
+    <div class="fix_height secontent">
+    
+    <!-- 用户头像 -->
+      <div class="img" style="background-image:url('__IMG__/Ebshaoer/background_img.jpg');background-size:100% 250px;background-repeat:no-repeat;width:100%;height:250px;">
+        <div style="text-align:center; padding-top:6%;">
+            <img src="{$wx_img}" style="width:28%;border-radius:60%;"/>
+            <p><font color="white" size="4px">昵称：{$wx_nickname}</font></p>
+            <div style="text-align:center; padding-top:5%;">
+              <p><font color="white" size="4px">押金余额：{$yue}元</font></p>
+            </div>
+        </div>
+      </div>
+      <br/><br/>
+      <if condition="$red neq 1">
+      <div style="background-color:#c0c1c0;height:120px;width:100%">
+          <div style="text-align:center;padding-top:50px;color:white;font-size:18px;">
+            <img src="__IMG__/Ebshaoer/jinggao.png" style="width:30px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;警告
+          </div>
+      </div>
+      </if>
+      <if condition="$red eq 1">
+      <a href="{:U('Honey/deposit_detail',array('keci'=>$keci,'yue'=>$yue))}">
+        <div style="background-color:#e85455;height:120px;width:100%">
+            <div style="text-align:center;padding-top:50px;color:white;font-size:18px;">
+              <img src="__IMG__/Ebshaoer/jinggao.png" style="width:30px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;警告
+            </div>
+        </div>
+      </a>
+      </if>
+      <br/>
+      <if condition="$kecheng neq null">
+	      <a href="javascript:void(0)" onclick="subgo()">
+	      <div style="background-color:#c0c1c0;height:120px;width:100%">
+	          <div style="text-align:center;padding-top:50px;color:white;font-size:18px;">
+	            <img src="__IMG__/Ebshaoer/tuihuan.png" style="width:30px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;退换课
+	          </div>
+	      </div>
+	      </a>
+      </if>
+      <br/>
+
+
+    <footer data-role="footer" class="footer">
+         
+      <div class="pcenter width9">
+          <p class="fl footer_text"><strong><i>EBfree.com</i></strong></p>
+          <p class="fr footer_text"><strong>4008-80-80-80</strong></p>
+      </div>
+
+   </footer>
+  </div>
+  <script type="text/javascript">
+   $('.question').on('click', function(){  
+    layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['280px', '180px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#template').html(),
+  });
+  });
+  </script>
+
+  <script type="text/javascript">
+   function subgo(){  
+    layer.open({
+    type: 1,
+    title: false, //不显示标题
+    area: ['320px', '260px'], //宽高    
+    shadeClose: true, //开启遮罩关闭
+    content:$('#templat').html(),
+  });
+  }
+  </script>
+
+
+  <script type="text/javascript">
+		function checkForm(){
+			// var a=document.getElementById("course").value;
+			// alert(a);
+			// if ((a == null) || (a.length == 0) || (a == '空') || (a == "") || (a == "请选择"))
+			// {
+			// 	alert("请选择退换课程！");
+			// 	return false;
+			// }
+      var j = 0;
+			var b=document.getElementsByName("tui");
+      //alert(b);
+      for(var i=0;i<b.length;i++){
+        if(b[i].checked){
+          if(b[i].value == '0'){
+             j++;
+           }
+        }
+      }
+      if(j == 2){
+        alert("请选择 '是'!")
+        return false;
+      }      
+			
+		}
+  </script>
+</body>
+</html>

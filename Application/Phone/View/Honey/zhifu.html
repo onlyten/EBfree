@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="__CSS__/index/snower.css" media="all">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/theme_red.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/main.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/index.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/reset.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/common.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/index/font-awesome.css">
+<script type="text/javascript" async="" src="__JS__/index/wtj.js"></script>
+<script src="__JS__/index/getsignpackage" type="text/javascript"></script>
+<script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+<script type="text/javascript" src="__JS__/index/maivl.js"></script>
+<script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+<script type="text/javascript" src="__JS__/index/swipe_circle.min.js"></script>
+<script type="text/javascript" src="__JS__/index/index.js"></script>
+<style type="text/css">
+   .footer{ position: fixed;height: 48px; width: 100%; max-width: 640px; background-color: #3F3B3A; bottom:0px; }
+   .body{ margin-bottom:48px; }
+   .footer_left{font-size: 18px; color:#fff; padding-top: 10px;}
+   .fleft{ float: left; }
+   .fright{ float: right; }
+   .width9{ width:90%; margin:0 auto; }
+   .button.red{
+    border:1px solid #b42323;
+    box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+    background: -webkit-linear-gradient(top,#e85455,#e85455);
+    background: -moz-linear-gradient(top,#e85455,#e85455);
+    background: linear-gradient(top,#e85455,#e85455);
+    }
+</style>
+<title>在线支付</title>
+<script type="text/javascript">
+    //调用微信JS api 支付
+    function jsApiCall()
+    {
+        
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',
+            {$paraVal},
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                //alert(res.err_code+res.err_desc+res.err_msg);
+            }
+        );
+    }
+
+    function callpay()
+    {
+        //ja = <?php echo $jsApiParameters; ?>;
+        //ja = "abc";
+        //alert("ja");
+
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+</script>
+        
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="telephone=no, address=no" name="format-detection">
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- Mobile Devices Support @end -->
+        <link rel="stylesheet" type="text/css" href="__CSS__/index/weimobfont.css" media="all">
+        <link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">
+    </head>
+    <body onselectstart="return true;" ondragstart="return false;">
+        
+<div data-role="container" class="container" style="height: 658px;background:#eae9e8;">
+    <header data-role="header">
+    <div style="background:#eae9e8;">
+        <div style="margin-left:15px;margin-right:15px;padding-top:15px;padding-bottom:10px;">
+            <p style="font-size:20px;"><strong>自然拼读VIP课程</strong></p>
+            <font size="4px">请您支付0.01元，完成每日计划任务，押金即可返还。</font>
+            <span style="float:right;"><a href="javascript:void(0);" onclick="js_method()"><u><font size="4px">规则</font></u></a></span>
+        </div>
+    </div>
+
+    <div style="background:#f5f4f3;height:50px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;兑换券</p>
+        <sapn style="float:right;margin-top: -26px;margin-right: 20px;font-size:18px;"><input type="submit" style="width:60px; background:red;color:white;border-width: 0px;height:30px;" value="验证"/></sapn>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:4px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;抵用券/优惠券</p>
+        <span style="float:right;color:red;font-size:18px;margin-top: -20px;margin-right: 20px;">></span>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:7px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;EB蜜蜂红包</p>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;实付金额</p>
+        <span style="float:right;color:red;font-size:18px;margin-top: -20px;margin-right: 20px;">0.01</span>
+    </div><br/>
+    <p style="font-size:18px;color:red;">&nbsp;&nbsp;&nbsp;&nbsp;请选择支付方式</p>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;微信支付</p>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;支付宝支付</p>
+    </div>
+    <div style="background:#f5f4f3;height:50px;margin-top:11px;">
+        <p style="padding-top: 15px;font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;银行卡</p>
+    </div><br/>
+    <div align="center">
+        <button style="width:160px; height:50px; background-color:red; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:20px;" type="button" onclick="callpay()" >确认支付</button>
+    </div>
+
+    </header>
+    
+
+    <footer data-role="footer" class="footer">
+        <!--<div class="copyright"><a href="http://wxc63011ef3f85e714.m.weimob.com/weisite/home?pid=507002&bid=1046949&wechatid=fromUsername&wxref=mp.weixin.qq.com" style="color:#B70000">© 天津英孚青少儿英语</a></div>-->
+         
+      <div class="clearfix width9">
+        <p class="fleft footer_left"><strong><i>EBfree.com</i></strong></p>
+        <p class="fright footer_left"><strong>4008-80-80-80</strong></p>
+      </div>
+
+
+   </footer>
+
+<!--
+导航菜单
+   后台设置的快捷菜单
+-->
+
+<script type="text/javascript" src="__JS__/index/ChatFloat.js"></script>
+<script type="text/javascript">
+var str_domain = location.href.split('/',4)[2];
+var boolIsTest = true;
+if(str_domain == 'www.weimob.com' || str_domain.indexOf('m.weimob.com') > 0){
+	boolIsTest = false;
+}
+//1.0 web
+new ChatFloat({
+        AId: '507002',
+        openid: "",
+		top:150,
+		right:0,
+		IsTest:boolIsTest
+});
+</script>
+
+<!--
+echo STATIC_DOMAIN."/src/jQuery.js?v=10101011 
+-->
+<script type="text/javascript" src="__JS__/index/share_channel.js"></script>
+<script type="text/javascript" src="__JS__/index/base64.js"></script>
+<script type="text/javascript" src="__JS__/index/st.js"></script>
+<script type="text/javascript">
+function js_method() {
+    alert("　　　关于EB蜜蜂押金返还的规则\n\n1.根据任务列表，成功完成每日任务，所有任务完成后，押金全额返还。\n2.&&&&&&&&&&&&&&&&&。\n3.%%%%%%%%%%%%%%%%%%%%%%。\n4.￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥。");
+    // body...
+}
+ //var jq=$.noConflict();
+ //使用案例如###如若上线请到研发群找我@赵增煜###
+st.push("_triggerEvent",{
+		"is_statistic_on":"on", //开关
+		"statisticServerPath": "http://statistic.weimob.com/wm.js", //统计地址
+		"memcServerPath": "http://statistic.weimob.com/memc?cmd=get", //缓存地址
+		"stat_action":"loadPage",  //统计动作类型
+		"stat_optValue":""    //参数值
+});
+</script>
+
+<!-- weixin js sdk start-->
+<script type="text/javascript" src="__JS__/index/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="__JS__/index/weixin.js"></script>
+<script type="text/javascript">
+// alert(window.shareData.t_callback_func);
+// alert('getShareImageUrl'+window.shareData.f_callback_func);
+var imgUrl= getShareImageUrl();
+_share.push("_shareEvent",{
+		"is_share_on":"on", //开关
+		"pid":507002,
+		"bid":"",
+		"mUrl":"http://m.weimob.com",
+		"optVal":
+        {
+            "shareLink": window.shareData.timeLineLink,
+            "shareTitle": window.shareData.tTitle,
+            "shareContent":window.shareData.tContent,
+            "shareImg":window.shareData.imgUrl,
+            "t_callback_func":window.shareData.t_callback_func,
+            "f_callback_func":window.shareData.f_callback_func,
+            "shareType":"",     
+            "shareDataUrl":""
+        }
+});
+</script>
+</div><script src="__JS__/index/wm.js"></script></body></html>

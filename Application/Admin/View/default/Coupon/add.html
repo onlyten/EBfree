@@ -1,0 +1,310 @@
+<extend name="Base/base" />
+<block name="special_css">
+    <link rel="stylesheet" href="__STYLE__/uploadifive/css/uploadifive.css" />
+    <link rel="stylesheet" href="__STYLE__/colorpicker/css/jquery-ui.css" />
+    <link rel="stylesheet" href="__STYLE__/colorpicker/css/evol-colorpicker.min.css" />
+    <link rel="stylesheet" href="__STYLE__/datetimepicker/css/bootstrap-datetimepicker.css" />
+</block>
+<block name="main">
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+            </div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div id="content-body" class="container-fluid">
+            <h3>
+              <span>新增优惠券</span>
+            </h3>
+            <form class="form-horizontal" method="POST" action="{:U('coupon/add_update')}">
+                <div class="widget-box" style="">
+                    <div class="widget-title">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Yee_tab1" data-toggle="tab">优惠券信息</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-content tab-content" style="">
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                商户名称： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="商户名字,字数上限为12个汉字" value="" style="" name="brand_name" id="brand_name" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                客服电话： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="service_phone" id="service_phone" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                卡券名称： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="上限为9个汉字，建议涵盖卡券属性、服务及金额。如双人套餐100元兑换券" value="" style="" name="title" id="title" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">所属课程：</label>
+                            <div class="controls select-div">
+                                <select name="course_id" id="course_id">
+                                    <foreach name="course" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                分类名称： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="券名，字数上限为18个汉字。如鸳鸯锅底+牛肉1份+土豆一份" value="" style="" name="sub_title" id="sub_title" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                卡券颜色： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="" value="" style="" name="color" id="color" class="span5">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                商户logo： </label>
+                            <div class="controls row">
+                                <input id="logo_url_input" name="logo_url_input" type="file" multiple="true">
+                                <input type="text" id="logo_url" name="logo_url" style="">
+                            </div>
+                            <div id="queue_logo_url" style="margin-left: 140px;"></div>  
+                        </div>
+
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                优惠券图片: </label>
+                            <div class="controls row">
+                                <input id="pic_url_input" name="pic_url_input" type="file" multiple="true">
+                                <input type="text" id="pic_url" name="pic_url" style="display:none;">
+                            </div>
+                            <div id="queue_detail_img" style="margin-left: 140px;"></div>  
+                        </div>
+
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                使用提醒： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="卡券使用提醒，字数上限为16个汉字" value="" style="" name="notice" id="notice" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                使用说明： </label>
+                            <div class="controls row">
+                                <textarea 0="" placeholder="卡券使用说明，字数上限为1024个汉字" type="text" style="height:120px;" name="description" id="description" class=" span5"></textarea> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                卡券数量： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="卡券库存的数量，不支持填写0，上限为100000000" value="" style="" name="quantity" id="quantity" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="begin_timestamp" class="control-label">
+                                启用时间：</label>
+                            <div class="controls row">
+                                <div class="input-append">
+                                    <input type="text" 0="" placeholder="卡券启用时间" class="datetimepicker yeedate span5" value="" data-date-todyhighlight="true" data-date-format="yyyy-mm-dd hh:ii:ss" data-date-language="zh-CN" style="" name="begin_timestamp" id="begin_timestamp" data-date="">
+                                    <span class="add-on datetime-add-on" onclick="$(this).prev('#begin_timestamp').val('').data('date','').attr('data-date','');" href="javascript:;" style="cursor:pointer;margin-top:1px; padding: 4px 5px;"><i class="icon-remove"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="end_timestamp" class="control-label">
+                                失效时间：</label>
+                            <div class="controls row">
+                                <div class="input-append">
+                                    <input type="text" 0="" placeholder="卡券失效时间" class="datetimepicker yeedate span5" value="" data-date-todyhighlight="true" data-date-format="yyyy-mm-dd hh:ii:ss" data-date-language="zh-CN" style="" name="end_timestamp" id="end_timestamp" data-date="">
+                                    <span class="add-on datetime-add-on" onclick="$(this).prev('#end_timestamp').val('').data('date','').attr('data-date','');" href="javascript:;" style="cursor:pointer;margin-top:1px; padding: 4px 5px;"><i class="icon-remove"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                起用金额： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="代金券专用，表示起用金额。（单位为分）" value="" style="" name="least_cost" id="least_cost" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                减免金额： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="代金券专用，表示减免金额。（单位为分）" value="" style="" name="reduce_cost" id="reduce_cost" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="title" class="control-label">
+                                领券上限： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="每人可领券的数量限制。如1" value="" style="" name="get_limit" id="get_limit" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">能否分享：</label>
+                            <div class="controls select-div">
+                                <select name="can_share" id="can_share">
+                                    <foreach name="can_share" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">能否转赠：</label>
+                            <div class="controls select-div">
+                                <select name="can_give_friend" id="can_give_friend">
+                                    <foreach name="can_give_friend" item="value" key="key">
+                                        <option value="{$value['id']}">{$value['title']}</option>
+                                    </foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="custom_url_name" class="control-label">
+                                外链名称： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="自定义跳转外链的入口名字。如立即使用" value="" style="" name="custom_url_name" id="custom_url_name" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="custom_url" class="control-label">
+                                外链URL： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="自定义跳转的URL。" value="" style="" name="custom_url" id="custom_url" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="custom_url" class="control-label">
+                                入口提示： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="显示在入口右侧的提示语，不多于8个汉字" value="" style="" name="custom_url_sub_title" id="custom_url_sub_title" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="promotion_url_name" class="control-label">
+                                入口名称： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="营销场景的自定义入口名称。如产品介绍" value="" style="" name="promotion_url_name" id="promotion_url_name" class="span5"> </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="promotion_url" class="control-label">
+                                入口URL： </label>
+                            <div class="controls row">
+                                <input type="text" 0="" placeholder="入口跳转外链的地址链接。" value="" style="" name="promotion_url" id="promotion_url" class="span5"> </div>
+                        </div>
+
+
+
+
+
+                        
+                    </div>
+                    <div class="form-actions">
+                        <button id="btn-0" class="btn btn-success" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--end-main-container-part-->
+</block>
+<block name="special_js">
+    <script src="__STYLE__/colorpicker/js/evol-colorpicker.js"></script> 
+    <script src="__STYLE__/uploadifive/js/jquery.uploadifive.js"></script> 
+    <script src="__STYLE__/datetimepicker/js/bootstrap-datetimepicker.js"></script> 
+    <script src="__STYLE__/datetimepicker/js/bootstrap-datetimepicker.zh-CN.js"></script> 
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // No color indicator
+        $('#color').colorpicker({
+            strings: 'Theme Colors,请选择,Web Colors,Theme Colors,Back to Palette,History,No history yet.'
+        }); 
+    });
+    <?php $timestamp = time();?>
+        $(function() {            
+            $('#logo_url_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_logo_url',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".banner-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_logo_url").append("<div class='upload-img-box banner-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#logo_url").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.banner-img-box').remove();
+                    });
+                }
+            });
+
+            
+            $('#pic_url_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_detail_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".detail-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_detail_img").append("<div class='upload-img-box detail-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#pic_url").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.detail-img-box').remove();
+                    });
+                }
+            });
+            $('#level_img_input').uploadifive({
+                'auto'             : true,
+                'buttonText'      : '上传图片', 
+                'formData'         : {
+                                       'timestamp' : '<?php echo $timestamp;?>',
+                                       'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
+                                     },
+                'queueID'          : 'queue_level_img',
+                'uploadScript'     : '{:U('course/img_upload')}',
+                'onAddQueueItem' : function(file) {
+                    $(".level-img-box").remove();
+                },
+                'onUploadComplete' : function(file, data) {
+                    $("#queue_level_img").append("<div class='upload-img-box level-img-box' style='margin-bottom: 5px;'><div class='upload-pre-item'><img src='"+data+"'><div class='remove_img'><i class='fa fa-times-circle'></i></div></div></div>");
+                    $("#level_img").val(data);
+                    $(".complete").hide();
+                    $(".remove_img").on('click', function(event) {
+                        $(this).parents('.level-img-box').remove();
+                    });
+                }
+            });
+        });
+    $(document).ready(function() {
+        
+        /*初始化select表单*/
+        $('select').select2();
+
+    });
+
+    </script>
+    <script charset="utf-8" type="text/javascript">
+        $(document).ready(function() {
+            var options = {"level":"s","todayBtn":"linked","phpformat":"Y-m-d H:i:s","format":"yyyy-mm-dd hh:ii:ss","minView":0};
+            options.language  = 'zh-CN';
+            options.autoclose = true;
+            
+            $('.datetimepicker.yeedate#begin_timestamp').datetimepicker(options);
+            $('.datetimepicker.yeedate#end_timestamp').datetimepicker(options);
+        });
+    </script>      
+</block>

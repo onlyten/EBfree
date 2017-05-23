@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+ <!-- 弹出层 加入班级 王超 20160329 test start -->
+ <html style="background:#E5E3DE;font-family:SimHei;">
+ <head>
+    <script type="text/javascript" src="__JS__/index/jQuery.js"></script>
+    <script type="text/javascript" src="__JS__/index/jquery_min.js"></script>
+ </head>
+
+ <body style="margin:0 0 0 0;">
+    <div id="joinclass">
+      <div style="background:#E5E3DE;;font-family:SimHei;">
+        <form enctype="multipart/form-data" name="form2" action="{:U('Honey/update_class')}" method="post" >
+        <div style="margin-top:25px;text-align:center;">  
+
+            <input  type="hidden"  name="member_level_id" id="member_level_id" value="{$member_level_id}">
+
+            <input  style="width:90%; height:35px;"  name="student_name" id="student_name" placeholder="学员姓名" value="">
+
+            <div style="width:100%;height:10px;"></div>
+
+            <div style="width:50%;height:35px;text-align:left;padding:0 0 0 0;float:left;">
+                <div style="width:45%;height:35px;text-align:left;padding:8px 0 0 10%;float:left;">
+                    <font color="black" size="3px">学员性别</font>
+                </div>
+                <div>
+                <input style="display:none" type="radio" id="radio_male" checked="checked" name="student_gender" value="0" >
+                <label for="radio_male" id="student_male" onclick="selectmale()" style="background:#656262;width:20%;height:25px;text-align:center;padding:8px 0 0 0;float:left;">男</label>
+                </div>
+                <div>
+                <input style="display:none" type="radio" id="radio_female" name="student_gender" value="1">
+                <label for="radio_female" id="student_female" onclick="selectfemale()" style="background:white;width:20%;height:25px;text-align:center;padding:8px 0 0 0;float:left;">女</label>
+                </div>
+            </div>
+            <div style="width:35%;height:35px;padding:0 5% 0 0;float:right;">
+                <select style="width:100%;height:35px;" id="student_age" name="student_age">
+                 <option value="">学员年龄</option>
+                 <option value="3">3岁</option>
+                 <option value="4">4岁</option>
+                 <option value="5">5岁</option>
+                 <option value="6">6岁</option>
+                 <option value="7">7岁</option>
+                 <option value="8">8岁</option>
+                 <option value="9">9岁</option>
+                 <option value="10">10岁</option>
+                 <option value="11">11岁</option>
+                 <option value="12">12岁</option>
+                 <option value="13">13岁</option>
+                 <option value="14">14岁</option>
+            </select>
+            </div>
+            
+            
+            <div style="width:100%;height:45px;"></div>
+
+            <input  style="width:90%; height:35px;"  name="student_phone" id="student_phone" placeholder="手机(此号码用于接收班级信息)" value="">
+
+            <div style="width:100%;height:10px;"></div>
+
+            <input  style="width:90%; height:35px;"  name="student_school" id="student_school" placeholder="所在学校" value="">
+
+            <div style="width:100%;height:10px;"></div>
+
+            <input type="submit" style="width:40%; height:40px;background:#CD5555;color:white;border-left-width: 0px; font-size:20px" value="确认提交"/>
+
+            <div style="width:100%;height:25px;"></div>
+        </div> 
+        </form>
+      </div>
+    </div>
+    <script>
+        $("form").submit( function () {
+            var regBox = {
+                 regMobile : /^0?1[3|4|5|8][0-9]\d{8}$/,//手机
+            }
+            var mobile = document.getElementById("student_phone").value;
+            var mflag = regBox.regMobile.test(mobile);
+            if (!mflag) {
+                alert("请输入正确的手机号！");
+                return false;
+            };
+            if ($('#student_name').val() == '') {
+                alert('请输入姓名');
+                return false;
+            };
+            if ($('#student_age').val() == '') {
+                alert('请输入年龄');
+                return false;
+            };
+            if ($('#student_school').val() == '') {
+                alert('请输入所在学校');
+                return false;
+            };
+        } );
+        //男女radio按钮自定义样式
+        function selectmale(){
+            var malebutton=document.getElementById("student_male");
+            var femalebutton=document.getElementById("student_female");
+            malebutton.style.background='#656262';
+            femalebutton.style.background='white';
+        }
+        function selectfemale(){
+            var malebutton=document.getElementById("student_male");
+            var femalebutton=document.getElementById("student_female");
+            femalebutton.style.background='#656262';
+            malebutton.style.background='white';
+        }
+ </script>
+</body>
+<html>
+    <!-- 弹出层 加入班级 end -->

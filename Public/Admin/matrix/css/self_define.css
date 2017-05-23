@@ -1,0 +1,130 @@
+#header {
+    margin-top: 0;
+    padding-top: 10px;
+    background-color: #1f262d;
+    height: 77px;
+    position: relative;
+    width: 100%;
+    z-index: -9;
+}
+
+#header h1 {
+    background: transparent url("../img/logo.png") no-repeat scroll 0 0;
+    height: 53px;
+    left: 20px;
+    line-height: 600px;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    width: 191px;
+}
+
+.gritter-item-wrapper.warning .gritter-item {
+    background: #f89406;
+}
+
+.gritter-item-wrapper.error .gritter-item {
+    background: #f89406;
+}
+
+.gritter-item-wrapper.success .gritter-item {
+    background: #5bb75b;
+}
+
+.gritter-item-wrapper.info .gritter-item {
+    background: #49afcd;
+}
+
+.gritter-item-wrapper.inverse .gritter-item {
+    background: #333;
+}
+
+.gritter-item-wrapper.important .gritter-item {
+    background: #f74d4d;
+}
+
+.gritter-item-wrapper.primary .gritter-item {
+    background: #006dcc;
+}
+
+.select-div {
+    width: 245px;
+}
+
+.upload-img-box {
+    width: 120px;
+    position: relative;
+}
+
+.remove_img {
+    cursor: pointer;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: -10px;
+    width: 30px;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.form-horizontal .control-label {
+    font-weight: bold;
+    padding-top: 15px;
+    width: 120px;
+    float: left;
+}
+
+.form-horizontal .controls {
+    margin-left: 140px;
+    padding: 10px 0;
+}
+
+.widget-box {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #cdcdcd;
+    clear: both;
+    position: relative;
+}
+
+/*摘自yee-admin.css start*/
+
+.widget-title > .btn,
+.widget-title > .btn-group {
+    margin-top: 7px;
+}
+
+.offset-left {
+    margin-left: 6px;
+}
+
+.offset-right {
+    margin-right: 6px;
+}
+
+.content-with-header .widget-box {
+    margin-top: 0;
+}
+
+#search_condition .widget-box {
+    margin-top: 0;
+}
+
+.table th {
+    padding: 8px;
+    text-align: left;
+}
+
+.shadow {
+    box-shadow: 2px 2px 10px #909090, -2px -2px 10px #909090;
+}
+
+
+/*摘自yee-admin.css end*/

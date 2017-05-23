@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <!-- 弹出层 短信验证码前的图形验证码 王超 20160429 test -->
+ <html style="background:#e5e3de;font-family:SimHei;">
+ <head>
+ </head>
+
+<body style="margin:21px 0 0 0">
+    <center>
+        <img src="{:U('Register/verify_code')}" style="width:80%;"/>
+    </center>
+    <form enctype="multipart/form-data" name="form1" action="{:U('check_verify')}" method="post" >
+        <input  class="inputtext" style="display:none"  name="phone" id="phone" value="{$phone}">
+        <center><div>
+        <input  class="inputtext" style="width:55%;height:30px;"  name="verify_code" id="verify_code" placeholder="请输入验证码" value="">
+        <button type="submit" style="border:none;width:21%;height:30px;background:#CD5555;color:white;">确认</button>
+        </div></center>
+    </form>
+    <script type="text/javascript"> 
+        window.onload = function()
+        {
+            document.getElementById("verify_code").focus();
+        }
+    </script>
+</body>
+<html>
